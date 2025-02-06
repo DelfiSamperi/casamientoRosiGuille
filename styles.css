@@ -1,0 +1,13 @@
+/*
+.noto-serif-hentaigana-<uniquifier> {
+    font-family: "Noto Serif Hentaigana", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+};
+*/
+
+#audio-btn {
+    width: 50px;
+    height: auto;
+}
