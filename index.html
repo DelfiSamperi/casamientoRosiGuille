@@ -1,45 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boda Rosi & Guille</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    
     <link rel="stylesheet" href="styles.css" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hentaigana&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Noto+Serif+Hentaigana&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <img id="audio-btn" src="./images/playbutton.png" alt="Play Music">
-    <div classname="portada">
-        <h3>Nos casamos!</h3>
-        <h1>Rosi & Guille</h1>
-        <p>Aca ponemos una linda frase</p>
-    </div>
-    <div classname="fecha-lugar">
-        <div classname="cuenta-regresiva">
-        <p>ACA PONEMOS LA CUENTA REGRESIVA></p>
+    <section class='portada'>
+        <!-- <img id="audio-btn" src="./images/playbutton.png" alt="Play Music"> -->
+        <h3>¡Nos casamos!</h3>
+        <div class="nombres-novios">
+            <h1 id="h1-1">Rosi</h1>
+            <h1 id="h1-2">&</h1>
+            <h1 id="h1-3">Guille</h1>
         </div>
-        <img src="" alt="una-linda-foto"/>
-        <div classname="lugares">
-            <h3>FESTEJEMOS JUNTOS</h3>
-            
+        <div class="frase">
+            <p>"El amor sobrelleva y soporta,</p>
+            <p>arriesga y equilibra,</p>
+            <p>el amor vence todo."</p>
+        </div>
+        <img class="fotito" src="./images/anillo.jpeg" alt="rosi-mostrando-anillo" />
+    </section>
+
+    <section class="fecha">
+        <h3> 12 de Octubre de 2025</h3>
+        <p>ACA PONEMOS LA CUENTA REGRESIVA >>></p>
+    </section>
+
+
+    <section class="spots">
+
+        <h3>FESTEJEMOS JUNTOS</h3>
+        <div class="ceremonia">
             <h5>Ceremonia</h5>
-            <p>12 de Octubre de 2025 12:00 hs Iglesia Lalala esa queda cerca</p>
-            <button id="iglesia" >Como llegar</button>
-
+            <p>12 de Octubre de 2025</p>
+            <p>12:00 hs</p>
+            <p>Iglesia de aca cerca</p>
+            <button id="iglesia">Como llegar</button>
+        </div>
+        <div class="festejo">
             <h5>Festejo</h5>
-            <p>12 de Octubre de 2025 14:00 hs Terra Oliva la loma del ogt</p>
-            <button id="salon" >Como llegar</button>
+            <p>12 de Octubre de 2025</p>
+            <p>14:00 hs</p>
+            <p>Salón Terra Oliva</p>
+            <button id="salon">Como llegar</button>
         </div>
-        <div classname="dresscode">
-            
-        </div>
-        
 
-    </div>
+    </section>
+
+    <section classname="dresscode">
+        <img src="" alt="una-linda-foto" />
+        <h3>Dress Code</h3>
+        <p>Te venis vestidx super elegante porque es un casamiento de gente importante</p>
+    </section>
+
+    <section classname="asistencia">
+        <h3>¿Venís?</h3>
+        <p><a id='link' target="_blank" href="https://goo.su/fr3W">Confirmanos tu asistencia</a>
+            antes del 10 de Septiembre de 2025</p>
+    </section>
+
+    <section classname="extras">
+        <div class="agendar">
+            <h3>Agendá la fecha</h3>
+            <button>agenda >></button>
+        </div>
+       <div class="album">
+            <p>Unite al album para compartir fotos del evento</p>
+            <button>Unirse >></button>
+       </div>
+    </section>
+
     <footer>
-
+        <p>Te esperamos para festejar juntos...</p>
+        <h3>Rosi y Guille</h3>
     </footer>
 </body>
+
 </html>

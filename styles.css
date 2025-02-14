@@ -1,13 +1,129 @@
-/*
-.noto-serif-hentaigana-<uniquifier> {
+:root {
+    --color-1: #e6d4ba;
+    --color-2: #9bb4d3;
+    --color-3: #3f94ac;
+    --color-4: #946432;
+    --color-5: #69351d;
+    --color-6: #c2d1d2;
+    --color-7: #5a6b7c;
+    --color-8: #7b5f59;
+    --color-9: #9a9791;
+    --color-10: #2c2f30;
+}
+
+html,
+body {
     font-family: "Noto Serif Hentaigana", serif;
     font-optical-sizing: auto;
     font-weight: 400;
+    font-size: 1.2em;
+    text-align: center;
     font-style: normal;
-};
-*/
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-1);
+    color: var(--color-10);
+}
+
+h1 {
+    font-family: "Ms Madi", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3em;
+    color: var(--color-8);
+}
+
+h3 {
+    font-size: 0.9em;
+    font-style: normal;
+    font-weight: 300;
+    color: var(--color-4);
+    margin-top: 3em;
+    margin-bottom: 0;
+}
+
+h5 {
+    font-size: 0.9em;
+    font-style: italic;
+    font-weight: 200;
+    color: var(--color-3);
+}
+
+p{
+    font-size: 0.7em;
+    font-style: normal; 
+    margin: auto 3em;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 10em auto;
+}
+
+.fotito {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    overflow: hidden;
+    width: 90%;
+    border-radius: 0.8em;
+    box-shadow: 0.3em 0.3em 0.8em var(--color-8);
+}
 
 #audio-btn {
-    width: 50px;
-    height: auto;
+    width: 40vw;
+    height: 40vw;
 }
+
+button {
+    display: block;
+    margin: 40px auto;
+    width: 40%;
+    padding: 15px;
+    font-size: 0.8em;
+    background-color: var(--color-3);
+    color: var(--color-1);
+    border: none;
+    border-radius: 10px;
+}
+
+.portada div, h3, img{
+    margin-bottom: 2em;
+}
+
+.portada p{
+    font-style: italic;
+}
+
+/* CHAT GPT */
+
+.nombres-novios h1 {
+    position: relative;
+   margin: 0;
+}
+
+#h1-1 {
+    transform: translateX(-50px); /* Ajuste a la izquierda */
+}
+
+#h1-2 {
+    font-size: 2em;
+    z-index: 2; /* Colocar encima */
+}
+
+#h1-3 {
+    transform: translateX(50px); /* Ajuste a la derecha */
+}
+
+a{
+    color: var(--color-3);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--color-10);
+}
+
