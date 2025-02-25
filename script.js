@@ -1,3 +1,32 @@
+//CARGA DEL ARCHIVO DE AUDIO
+
+    /*
+    document.getElementById("playAudio").addEventListener("click", function() {
+        const audio = new Audio("./media/likePrayer.mp3");
+        audio.play();
+    });
+    */
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const audio = new Audio("");
+
+        //const audio = document.getElementById("audio");
+        const button = document.getElementById("playAudio");
+
+        button.addEventListener("click", function() {
+            if (audio.paused) {
+                audio.play();
+                button.textContent = "⏸";
+            } else {
+                audio.pause();
+                button.textContent = "▶";
+            }
+        });
+    });
+
+
+//cuenta regresiva del casamiento
+
 document.addEventListener("DOMContentLoaded", function() {
     function actualizarCuentaRegresiva() {
         const fechaObjetivo = new Date("2025-10-12T00:00:00").getTime();

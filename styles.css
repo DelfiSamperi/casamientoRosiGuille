@@ -52,7 +52,7 @@ h5 {
 p{
     font-size: 0.7em;
     font-style: normal; 
-    margin: auto 3em;
+    margin: auto 2em;
 }
 
 section {
@@ -61,6 +61,7 @@ section {
     width: 100%;
     height: auto;
     padding: 10em auto;
+    /*margin-bottom: 1em;*/
 }
 
 .fotito {
@@ -127,3 +128,6 @@ a:hover{
     color: var(--color-10);
 }
 
+footer {
+    margin-top: 2em;
+}
