@@ -39,7 +39,6 @@ h3 {
     font-weight: 300;
     color: var(--color-4);
     margin-top: 3em;
-    margin-bottom: 0;
 }
 
 h5 {
@@ -47,6 +46,7 @@ h5 {
     font-style: italic;
     font-weight: 200;
     color: var(--color-3);
+    margin-top: 1em ;
 }
 
 p{
@@ -74,9 +74,53 @@ section {
     box-shadow: 0.3em 0.3em 0.8em var(--color-8);
 }
 
-#audio-btn {
-    width: 40vw;
-    height: 40vw;
+.icon{
+    display: block;
+    margin: 0 40% 0%;
+    margin-top: 1em;
+    height: auto;
+    overflow: hidden;
+    width: 20%;
+    align-self: center;
+    max-width: 100px;
+}
+
+.pics{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin: 0 auto;
+    padding: 2em 0.3em;
+}
+
+.pics img{
+    width: 100%;
+    max-width: 174px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.8em;
+}
+
+#playAudio {
+    position: fixed;  /* Fijo en la pantalla */
+    top: 0.9em; 
+    right: 4em;
+    width: 3em;  /* Tamaño del icono */
+    height: 3em;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;  /* Hace que parezca un botón */
+    z-index: 1000;  /* Asegura que esté sobre otros elementos */
+    transition: transform 0.2s ease-in-out;
+}
+
+#playAudio:active {
+    transform: scale(0.9); /* Efecto de clic */
+    border: none;
+    /* animation: vertical-shaking 0.7s infinite; */
 }
 
 button {
@@ -91,19 +135,43 @@ button {
     border-radius: 10px;
 }
 
+.portada {
+    background-image: url("./media/novios/ramo-transparente.JPG");
+    margin: 0;
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 100%;
+    height: 100vh;
+}
+/*
+.portada::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("./media/novios/ramo.JPG") center/cover no-repeat;
+    opacity: 0.5; Reduce la opacidad de la imagen
+}
+*/
+
 .portada div, h3, img{
     margin-bottom: 2em;
 }
 
 .portada p{
     font-style: italic;
+    color: var(--color-5);
 }
 
 /* CHAT GPT */
 
 .nombres-novios h1 {
     position: relative;
-   margin: 0;
+    margin: 0;
+    color: var(--color-10);
 }
 
 #h1-1 {

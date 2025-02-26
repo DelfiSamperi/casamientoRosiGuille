@@ -8,7 +8,7 @@
     */
     
     document.addEventListener("DOMContentLoaded", function() {
-        const audio = new Audio("");
+        const audio = new Audio("./media/likePrayer.mp3");
 
         //const audio = document.getElementById("audio");
         const button = document.getElementById("playAudio");
