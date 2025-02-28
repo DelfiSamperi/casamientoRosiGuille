@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <section class='portada'>
+    <header class='portada'>
         <button id="playAudio">▶</button>
 
         <h3>¡Nos casamos!</h3>
@@ -32,7 +32,7 @@
             <p>"El amor sobrelleva y soporta, arriesga y equilibra, el amor vence todo."</p>
         </div>
         <!-- <img class="fotito" src="./media/novios/anillo.jpeg" alt="rosi-mostrando-anillo" /> -->
-    </section>
+    </header>
 
     <section class="fecha">
         <h3> 12 de Octubre de 2025</h3>
@@ -67,31 +67,34 @@
 
     </section>
 
-    <section classname="dresscode">
-        <img class="fotito" src="./media/novios/novios.jpeg" alt="novios" />
-        <img class="icon" src="./media/wedding-dress.png" alt="dress-code" /> 
-        <h3>Dress Code</h3>
-        <p>Te venis vestidx super elegante porque es un casamiento de gente importante</p>
-    </section>
-
-    <section classname="asistencia">
-        <h3>¿Venís?</h3>
-        <p><a id='link' target="_blank" href="https://forms.gle/DMxDQtH1zAb2tRjh6">Confirmanos tu asistencia</a>
-            antes del 10 de Septiembre de 2025</p>
-    </section>
-
     <section classname="extras">
-        <img class="icon" src="./media/calendar.png" alt="dress-code" /> 
-        <div class="agendar">
+       
+       <img class="fotito" src="./media/novios/novios.jpeg" alt="novios" />
+
+        <div class="extra-div" id="dresscode">
+            <img class="icon" src="./media/wedding-dress.png" alt="dress-code" /> 
+            <h3>Dress Code</h3>
+            <p>Te venis vestidx super elegante porque es un casamiento de gente importante</p>
+        </div>
+    
+        <div class="extra-div" id="asistencia">
+            <h3>¿Venís?</h3>
+            <p><a id='link' target="_blank" href="https://forms.gle/DMxDQtH1zAb2tRjh6">Confirmanos tu asistencia</a>
+                antes del 10 de Septiembre de 2025</p>
+        </div>
+        
+        <div class="extra-div" id="agendar">
+            <img class="icon" src="./media/calendar.png" alt="dress-code" /> 
             <h3>Agendá la fecha</h3>
             <button>agenda >></button>
         </div>
 
-        <img class="icon" src="./media/camera.png" alt="dress-code" /> 
-       <div class="album">
+       <div class="extra-div" id="album">
+            <img class="icon" src="./media/camera.png" alt="dress-code" /> 
             <p>Unite al album para compartir fotos del evento</p>
             <button>Unirse >></button>
        </div>
+       
     </section>
 
     <section class="pics">
@@ -108,6 +111,7 @@
         <h3>Rosi y Guille</h3>
     </footer>
 
+    <!-- vinculo al archivos JS (se pone al final para permitir que el DOM se cargue antes) -->
     <script src="script.js"></script>
 
 </body>
