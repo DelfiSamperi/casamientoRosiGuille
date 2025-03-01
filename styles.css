@@ -21,38 +21,38 @@ body {
     font-style: normal;
     display: flex;
     flex-direction: column;
-    background-color: var(--color-1);
     color: var(--color-10);
+    margin: 0;
+    overflow-x: hidden;
+    /*
+    background-color: var(--color-1);
+    */
+    background: linear-gradient(
+        to bottom,
+        var(--color-1) 70%,
+        var(--color-2) 100%
+    );
 }
 
-header, section {
+/* SECCIONES EN GENERAL  */
+
+header, section, footer {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     width: 100%;
     height: auto;
-    padding: 10em auto;
-    /*margin-bottom: 1em;*/
+    /*padding: 10em auto;*/
+    margin: 1.5em 0;
 }
 
-footer {
-    margin-top: 2em;
-}
-
+/* textos */
 h3 {
     font-size: 0.9em;
     font-style: normal;
     font-weight: 300;
     color: var(--color-4);
-    margin-top: 3em;
-}
-
-h1 {
-    font-family: "Ms Madi", serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 3em;
-    color: var(--color-8);
+    /*margin-top: 2em;*/
 }
 
 h5 {
@@ -60,7 +60,7 @@ h5 {
     font-style: italic;
     font-weight: 200;
     color: var(--color-3);
-    margin-top: 1em ;
+    /*margin-top: 1em ;*/
 }
 
 p{
@@ -69,12 +69,94 @@ p{
     margin: auto 2em;
 }
 
+/* PORTADA (HEADER)  */
+
+.portada {
+    background-image: url("./media/novios/ramo-transparente.JPG");
+    margin: 0;
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+/*
+.portada::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("./media/novios/ramo.JPG") center/cover no-repeat;
+    opacity: 0.5; Reduce la opacidad de la imagen
+}
+*/
+
+.portada p{
+    font-style: italic;
+    color: var(--color-5);
+}
+
+.nombres-novios h1 {
+    position: relative;
+    margin: 0;
+    color: var(--color-10);
+    font-family: "Ms Madi", serif;
+    font-weight: 500;
+    font-size: 3em;
+}
+
+#h1-1 {
+    /*background-color: #5a6b7c;*/
+    transform: translateX(-50px); /* Ajuste a la izquierda */
+}
+
+#h1-2 {
+    font-size: 2em;
+    z-index: 2; /* Colocar encima */
+}
+
+#h1-3 {
+    transform: translateX(50px); /* Ajuste a la derecha */
+}
+
+#playAudio {
+    position: fixed;  /* Fijo en la pantalla */
+    top: 0.9em; 
+    right: 4em;
+    width: 3em;  /* Tamaño del icono */
+    height: 3em;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;  /* Hace que parezca un botón */
+    z-index: 1000;  /* Asegura que esté sobre otros elementos */
+    transition: transform 0.2s ease-in-out;
+    animation: float 1.5s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); } /* Se mueve hacia arriba */
+    100% { transform: translateY(0px); } /* Vuelve a la posición original */
+}
+
+#playAudio:active {
+    transform: scale(0.9); /* Efecto de clic */
+    border: none;
+    /* animation: vertical-shaking 0.7s infinite; */
+}
+
+/*   */
+
 .fotito {
     display: block;
     margin: 0 auto;
     height: auto;
     overflow: hidden;
-    width: 90%;
+    width: 80%;
     border-radius: 0.8em;
     box-shadow: 0.3em 0.3em 0.8em var(--color-8);
 }
@@ -97,35 +179,19 @@ p{
     justify-content: center;
     align-items: center;
     gap: 1em;
-    margin: 0 auto;
-    padding: 2em 0.3em;
 }
 
 .pics img{
     width: 100%;
-    max-width: 174px;
+    max-width: 150px;
     height: auto;
     object-fit: cover;
     border-radius: 0.8em;
+    /* transition: transform 0.3s ease-in-out; */
 }
 
-#playAudio {
-    position: fixed;  /* Fijo en la pantalla */
-    top: 0.9em; 
-    right: 4em;
-    width: 3em;  /* Tamaño del icono */
-    height: 3em;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;  /* Hace que parezca un botón */
-    z-index: 1000;  /* Asegura que esté sobre otros elementos */
-    transition: transform 0.2s ease-in-out;
-}
-
-#playAudio:active {
-    transform: scale(0.9); /* Efecto de clic */
-    border: none;
-    /* animation: vertical-shaking 0.7s infinite; */
+.pics img:hover{
+    transform: scale(1.2);
 }
 
 button {
@@ -138,58 +204,6 @@ button {
     color: var(--color-1);
     border: none;
     border-radius: 10px;
-}
-
-.portada {
-    background-image: url("./media/novios/ramo-transparente.JPG");
-    margin: 0;
-    background-size: cover;  
-    background-position: center; 
-    background-repeat: no-repeat; 
-    width: 100%;
-    height: 100vh;
-}
-/*
-.portada::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("./media/novios/ramo.JPG") center/cover no-repeat;
-    opacity: 0.5; Reduce la opacidad de la imagen
-}
-*/
-
-.portada div, h3, img{
-    margin-bottom: 2em;
-}
-
-.portada p{
-    font-style: italic;
-    color: var(--color-5);
-}
-
-/* CHAT GPT */
-
-.nombres-novios h1 {
-    position: relative;
-    margin: 0;
-    color: var(--color-10);
-}
-
-#h1-1 {
-    transform: translateX(-50px); /* Ajuste a la izquierda */
-}
-
-#h1-2 {
-    font-size: 2em;
-    z-index: 2; /* Colocar encima */
-}
-
-#h1-3 {
-    transform: translateX(50px); /* Ajuste a la derecha */
 }
 
 a{
