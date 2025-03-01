@@ -1,33 +1,33 @@
 //CARGA DEL ARCHIVO DE AUDIO
 
-    /*
-    document.getElementById("playAudio").addEventListener("click", function() {
-        const audio = new Audio("./media/likePrayer.mp3");
-        audio.play();
-    });
-    */
-    
-    document.addEventListener("DOMContentLoaded", function() {
-        const audio = new Audio("./media/likePrayer.mp3");
+/*
+document.getElementById("playAudio").addEventListener("click", function() {
+    const audio = new Audio("./media/likePrayer.mp3");
+    audio.play();
+});
+*/
 
-        //const audio = document.getElementById("audio");
-        const button = document.getElementById("playAudio");
+document.addEventListener("DOMContentLoaded", function () {
+    const audio = new Audio("./media/likePrayer.mp3");
 
-        button.addEventListener("click", function() {
-            if (audio.paused) {
-                audio.play();
-                button.textContent = "⏸";
-            } else {
-                audio.pause();
-                button.textContent = "▶";
-            }
-        });
+    //const audio = document.getElementById("audio");
+    const button = document.getElementById("playAudio");
+
+    button.addEventListener("click", function () {
+        if (audio.paused) {
+            audio.play();
+            button.textContent = "⏸";
+        } else {
+            audio.pause();
+            button.textContent = "▶";
+        }
     });
+});
 
 
 //cuenta regresiva del casamiento
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     function actualizarCuentaRegresiva() {
         const fechaObjetivo = new Date("2025-10-12T00:00:00").getTime();
         const ahora = new Date().getTime();
@@ -51,3 +51,51 @@ document.addEventListener("DOMContentLoaded", function() {
     const intervalo = setInterval(actualizarCuentaRegresiva, 1000);
     actualizarCuentaRegresiva(); // Llamar inmediatamente para que no haya espera de 1 segundo
 });
+
+// lightbox de la galeria de imagenes
+
+const images = [
+    "./media/novios/novios2.jpeg",
+    "./media/novios/agua1.JPG",
+    "./media/novios/CIRY5282.JPG",
+    "./media/novios/IMG_0167.JPG",
+    "./media/novios/IMG_0178.JPG",
+    "./media/novios/IMG_0184.JPG",
+    "./media/novios/agua2.JPG",
+    "./media/novios/anillo.jpeg",
+    "./media/novios/IMG_0150.JPG",
+    "./media/novios/IMG_0172.JPG",
+    "./media/novios/novios.jpeg"
+];
+
+let currentIndex = 0;
+
+function openLightbox(index) {
+    currentIndex = index;
+    updateLightbox();
+    document.getElementById("lightbox").classList.add("show");
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").classList.remove("show");
+}
+
+function changeImage(direction) {
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = images.length - 1;
+    if (currentIndex >= images.length) currentIndex = 0;
+    updateLightbox();
+}
+
+function updateLightbox() {
+    document.getElementById("lightbox-img").src = images[currentIndex];
+    document.getElementById("image-counter").textContent = `${currentIndex + 1} / ${images.length}`;
+}
+
+// Cerrar con tecla ESC
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeLightbox();
+    if (event.key === "ArrowRight") changeImage(1);
+    if (event.key === "ArrowLeft") changeImage(-1);
+});
+

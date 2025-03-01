@@ -98,17 +98,27 @@
     </section>
 
     <section class="pics">
-        <img src="./media/novios/novios2.jpeg" alt="novios" />
-        <img src="./media/novios/agua1.JPG" alt="novios" />
-        <img src="./media/novios/CIRY5282.JPG" alt="novios" />
-        <img src="./media/novios/IMG_0167.JPG" alt="novios" />
-        <img src="./media/novios/IMG_0178.JPG" alt="novios" />
-        <img src="./media/novios/IMG_0184.JPG" alt="novios" />
-        <img src="./media/novios/agua2.JPG" alt="novios" />
-        <img src="./media/novios/anillo.jpeg" alt="novios" />
-        <img src="./media/novios/IMG_0150.JPG" alt="novios" />
-        <img src="./media/novios/IMG_0172.JPG" alt="novios" />
-        <img src="./media/novios/novios.jpeg" alt="novios" />
+        <img src="./media/novios/novios2.jpeg" alt="novios2" onclick="openLightbox(0)"/>
+        <img src="./media/novios/agua1.JPG" alt="agua1" onclick="openLightbox(1)"/>
+        <img src="./media/novios/CIRY5282.JPG" alt="ciry" onclick="openLightbox(2)" />
+        <img src="./media/novios/IMG_0167.JPG" alt="0167" onclick="openLightbox(3)" />
+        <img src="./media/novios/IMG_0178.JPG" alt="0178" onclick="openLightbox(4)" />
+        <img src="./media/novios/IMG_0184.JPG" alt="0184" onclick="openLightbox(5)" />
+        <img src="./media/novios/agua2.JPG" alt="agua2" onclick="openLightbox(6)" />
+        <img src="./media/novios/anillo.jpeg" alt="anillo" onclick="openLightbox(7)" />
+        <img src="./media/novios/IMG_0150.JPG" alt="0150" onclick="openLightbox(8)" />
+        <img src="./media/novios/IMG_0172.JPG" alt="0172" onclick="openLightbox(9)" />
+        <img src="./media/novios/novios.jpeg" alt="novios" onclick="openLightbox(10)" />
+
+        <!-- Lightbox (Pantalla completa) -->
+        <div id="lightbox" class="lightbox">
+            <span id="image-counter" class="image-counter"></span>
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-img" src="" alt="Imagen Ampliada">
+            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+            <button class="next" onclick="changeImage(1)">&#10095;</button>
+        </div>
+        
     </section>
 
     <footer>
