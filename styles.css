@@ -27,16 +27,16 @@ body {
     /*
     background-color: var(--color-1);
     */
-    background: linear-gradient(
-        to bottom,
-        var(--color-1) 70%,
-        var(--color-2) 100%
-    );
+    background: linear-gradient(to bottom,
+            var(--color-1) 70%,
+            var(--color-2) 100%);
 }
 
 /* SECCIONES EN GENERAL  */
 
-header, section, footer {
+header,
+section,
+footer {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -63,9 +63,9 @@ h5 {
     /*margin-top: 1em ;*/
 }
 
-p{
+p {
     font-size: 0.7em;
-    font-style: normal; 
+    font-style: normal;
     margin: auto 2em;
 }
 
@@ -74,9 +74,9 @@ p{
 .portada {
     background-image: url("./media/novios/ramo-transparente.JPG");
     margin: 0;
-    background-size: cover;  
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
     background-attachment: fixed;
@@ -95,7 +95,7 @@ p{
 }
 */
 
-.portada p{
+.portada p {
     font-style: italic;
     color: var(--color-5);
 }
@@ -111,40 +111,59 @@ p{
 
 #h1-1 {
     /*background-color: #5a6b7c;*/
-    transform: translateX(-50px); /* Ajuste a la izquierda */
+    transform: translateX(-50px);
+    /* Ajuste a la izquierda */
 }
 
 #h1-2 {
     font-size: 2em;
-    z-index: 2; /* Colocar encima */
+    z-index: 2;
+    /* Colocar encima */
 }
 
 #h1-3 {
-    transform: translateX(50px); /* Ajuste a la derecha */
+    transform: translateX(50px);
+    /* Ajuste a la derecha */
 }
 
 #playAudio {
-    position: fixed;  /* Fijo en la pantalla */
-    top: 0.9em; 
+    position: fixed;
+    /* Fijo en la pantalla */
+    top: 0.9em;
     right: 10%;
-    width: 3em;  /* Tamaño del icono */
+    width: 3em;
+    /* Tamaño del icono */
     height: 3em;
     border-radius: 50%;
     border: none;
-    cursor: pointer;  /* Hace que parezca un botón */
-    z-index: 800;  /* Asegura que esté sobre otros elementos */
+    cursor: pointer;
+    /* Hace que parezca un botón */
+    z-index: 800;
+    /* Asegura que esté sobre otros elementos */
     transition: transform 0.2s ease-in-out;
     animation: float 1.5s infinite ease-in-out;
 }
 
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); } /* Se mueve hacia arriba */
-    100% { transform: translateY(0px); } /* Vuelve a la posición original */
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    /* Se mueve hacia arriba */
+    100% {
+        transform: translateY(0px);
+    }
+
+    /* Vuelve a la posición original */
 }
 
 #playAudio:active {
-    transform: scale(0.9); /* Efecto de clic */
+    transform: scale(0.9);
+    /* Efecto de clic */
     border: none;
     /* animation: vertical-shaking 0.7s infinite; */
 }
@@ -161,7 +180,7 @@ p{
     box-shadow: 0.3em 0.3em 0.8em var(--color-8);
 }
 
-.icon{
+.icon {
     display: block;
     margin: 0 40% 0%;
     margin-top: 1em;
@@ -173,7 +192,7 @@ p{
 }
 
 /* GALERIA DE FOTOS  */
-.pics{
+.pics {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -182,7 +201,7 @@ p{
     gap: 1em;
 }
 
-.pics img{
+.pics img {
     width: 100%;
     max-width: 150px;
     height: auto;
@@ -191,8 +210,8 @@ p{
     transition: transform 0.3s ease;
 }
 
-.pics img:hover{
-    transform: scale(1.2);
+.pics img:hover {
+    transform: scale(1.1);
 }
 
 /* CUANDO ABRO CADA FOTO */
@@ -203,7 +222,7 @@ p{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(155, 180, 211, 0.6) ;
+    background: rgba(155, 180, 211, 0.6);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -236,7 +255,8 @@ p{
 }
 
 /* Botones de Navegación */
-.prev, .next {
+.prev,
+.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -249,10 +269,14 @@ p{
     width: 15%;
 }
 
-.prev { left: 5%; }
-.next { right: 5%; }
+.prev {
+    left: 5%;
+}
+.next {
+    right: 5%;
+}
 
-.image-counter{
+.image-counter {
     position: absolute;
     top: 7%;
     right: 18%;
@@ -273,12 +297,121 @@ button {
     border-radius: 10px;
 }
 
-a{
+a {
     color: var(--color-3);
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     color: var(--color-10);
 }
 
+@media(min-width: 500px) {
+    .lugares {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .pics img {
+        min-width: 25vw;
+    }
+
+    .lightbox img {
+        max-width: 45vw;
+        max-height: 85vh;
+        height: auto;
+        width: 100%;
+    }
+    .lightbox img:hover{
+        transform: none;
+    }
+    
+    /* Botón de Cerrar */
+    .close {
+        right: 25%;
+        font-size: 2em;
+    }
+    .close:hover{
+        transform: scale(1.2);
+    }
+
+    .image-counter {
+        top: 8%;
+        right: 75%;
+        font-size: 1.2em;
+    }
+
+    /* Botones de Navegación */
+    .prev,
+    .next {
+        font-size: 2em;
+        width: 10%;
+        transform: none;
+        top: 40%;
+        background: none;
+    }
+
+    .prev:hover,
+    .next:hover {
+        transform: scale(1.2);
+    }
+    .prev {
+        left: 20%;
+    }
+    .next {
+        right: 20%;
+    }
+
+    /* textos */
+    p {
+        font-size: 0.8em;
+    }
+
+    h5 {
+        font-size: 1em;
+    }
+
+    h3{
+        font-size: 1.1em;
+    }
+
+    .portada p {
+        font-size: 1.1em;
+    }
+    
+    .nombres-novios h1 {
+        font-weight: 500;
+        font-size: 4em;
+    }
+
+    #h1-2 {
+        font-size: 2.5em;
+    }
+ /* revisar iconos y boton del salon */
+ /*   
+ .icon {
+        display: block;
+        margin: 0 40% 0%;
+        margin-top: 1em;
+        height: auto;
+        overflow: hidden;
+        width: 20%;
+        align-self: center;
+        max-width: 100px;
+    }
+
+    button {
+        display: block;
+        margin: 40px auto;
+        width: 40%;
+        padding: 15px;
+        font-size: 0.8em;
+        background-color: var(--color-3);
+        color: var(--color-1);
+        border: none;
+        border-radius: 10px;
+    }
+    */
+}

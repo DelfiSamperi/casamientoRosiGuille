@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boda Rosi & Guille</title>
     <link rel="icon" type="image/png" sizes="32x32" href="./media/favicon-32x32.png">
-    
+
     <link rel="stylesheet" href="styles.css" />
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hentaigana&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Noto+Serif+Hentaigana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Noto+Serif+Hentaigana&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -44,62 +45,64 @@
     <section class="spots">
 
         <h3>FESTEJEMOS JUNTOS</h3>
-        <div class="ceremonia">
-            <h5>Ceremonia</h5>
-            <p>12 de Octubre de 2025</p>
-            <p>12:00 hs</p>
-            <p>Parroquia Nuestra Señora de los Dolores</p>
-            <p>Roque Sáenz Peña 464, Mendoza</p>
-            <a href="https://maps.app.goo.gl/xPPTuREE366yg7qw5" target="_blank">
-                <button id="iglesia">Como llegar</button>
-            </a>
-        </div>
-        <div class="festejo">
-            <h5>Festejo</h5>
-            <p>12 de Octubre de 2025</p>
-            <p>14:00 hs</p>
-            <p>Salón Terra Oliva</p>
-            <p>Videla Aranda 351, Maipú</p>
-            <a href="https://maps.app.goo.gl/WZmLS5r86FRt95XA7" target="_blank">
-                <button id="salon">Como llegar</button>
-            </a>
+        <div class="lugares">
+            <div class="ceremonia">
+                <h5>Ceremonia</h5>
+                <p>12 de Octubre de 2025</p>
+                <p>12:00 hs</p>
+                <p>Parroquia Nuestra Señora de los Dolores</p>
+                <p>Roque Sáenz Peña 464, Mendoza</p>
+                <a href="https://maps.app.goo.gl/xPPTuREE366yg7qw5" target="_blank">
+                    <button id="iglesia">Como llegar</button>
+                </a>
+            </div>
+            <div class="festejo">
+                <h5>Festejo</h5>
+                <p>12 de Octubre de 2025</p>
+                <p>14:00 hs</p>
+                <p>Salón Terra Oliva</p>
+                <p>Videla Aranda 351, Maipú</p>
+                <a href="https://maps.app.goo.gl/WZmLS5r86FRt95XA7" target="_blank">
+                    <button id="salon">Como llegar</button>
+                </a>
+            </div>
         </div>
 
     </section>
 
     <section classname="extras">
-       
-       <img class="fotito" src="./media/novios/novios.jpeg" alt="novios" />
+
+        <img class="fotito" src="./media/novios/novios.jpeg" alt="novios" />
 
         <div class="extra-div" id="dresscode">
-            <img class="icon" src="./media/wedding-dress.png" alt="dress-code" /> 
+            <img class="icon" src="./media/wedding-dress.png" alt="dress-code" />
             <h3>Dress Code</h3>
             <p>Te venis vestidx super elegante porque es un casamiento de gente importante</p>
         </div>
-    
+
         <div class="extra-div" id="asistencia">
             <h3>¿Venís?</h3>
             <p><a id='link' target="_blank" href="https://forms.gle/DMxDQtH1zAb2tRjh6">Confirmanos tu asistencia</a>
                 antes del 10 de Septiembre de 2025</p>
         </div>
-        
+
         <div class="extra-div" id="agendar">
-            <img class="icon" src="./media/calendar.png" alt="dress-code" /> 
+            <img class="icon" src="./media/calendar.png" alt="dress-code" />
             <h3>Agendá la fecha</h3>
             <button>agenda >></button>
         </div>
 
-       <div class="extra-div" id="album">
-            <img class="icon" src="./media/camera.png" alt="dress-code" /> 
+        <div class="extra-div" id="album">
+            <img class="icon" src="./media/camera.png" alt="dress-code" />
             <p>Unite al album para compartir fotos del evento</p>
             <button>Unirse >></button>
-       </div>
-       
+        </div>
+
     </section>
 
     <section class="pics">
-        <img src="./media/novios/novios2.jpeg" alt="novios2" onclick="openLightbox(0)"/>
-        <img src="./media/novios/agua1.JPG" alt="agua1" onclick="openLightbox(1)"/>
+        <img src="./media/novios/novios2.jpeg" alt="novios2" onclick="openLightbox(0)" />
+        <img src="./media/novios/agua1.JPG" alt="agua1" onclick="openLightbox(1)" />
         <img src="./media/novios/CIRY5282.JPG" alt="ciry" onclick="openLightbox(2)" />
         <img src="./media/novios/IMG_0167.JPG" alt="0167" onclick="openLightbox(3)" />
         <img src="./media/novios/IMG_0178.JPG" alt="0178" onclick="openLightbox(4)" />
@@ -118,7 +121,7 @@
             <button class="prev" onclick="changeImage(-1)">&#10094;</button>
             <button class="next" onclick="changeImage(1)">&#10095;</button>
         </div>
-        
+
     </section>
 
     <footer>
