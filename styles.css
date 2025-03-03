@@ -180,16 +180,27 @@ p {
     box-shadow: 0.3em 0.3em 0.8em var(--color-8);
 }
 
+.extra-div {
+    padding: 1em;
+
+}
+
 .icon {
+    width: 15vw;
+    height: auto;
+    place-self: center;
+    /*
     display: block;
     margin: 0 40% 0%;
     margin-top: 1em;
-    height: auto;
+    
     overflow: hidden;
-    width: 20%;
+    
     align-self: center;
     max-width: 100px;
-}
+*/
+    }
+
 
 /* GALERIA DE FOTOS  */
 .pics {
@@ -253,6 +264,9 @@ p {
     color: white;
     cursor: pointer;
 }
+.close:hover{
+    transform: scale(1.1);
+}
 
 /* Botones de Navegación */
 .prev,
@@ -260,13 +274,21 @@ p {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(90, 107, 124, 0.7);
+    /*background: rgba(90, 107, 124, 0.7); */
+    background: none;
     border: none;
     padding: 10px 15px;
     font-size: 1em;
     cursor: pointer;
-    color: white;
+    color: var(--color-10);
     width: 15%;
+}
+.prev:active,
+.next:active {
+    color: white;
+}
+.close:active {
+    color: var(--color-10);
 }
 
 .prev {
@@ -332,6 +354,7 @@ a:hover {
     .close {
         right: 25%;
         font-size: 2em;
+        color: white;
     }
     .close:hover{
         transform: scale(1.2);
@@ -341,6 +364,8 @@ a:hover {
         top: 8%;
         right: 75%;
         font-size: 1.2em;
+        color: white;
+
     }
 
     /* Botones de Navegación */
@@ -351,6 +376,7 @@ a:hover {
         transform: none;
         top: 40%;
         background: none;
+        color: white;
     }
 
     .prev:hover,
