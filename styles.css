@@ -9,6 +9,12 @@
     --color-8: #7b5f59;
     --color-9: #9a9791;
     --color-10: #2c2f30;
+
+    --color-11: #ff8559;
+    --color-12: #ea672c; 
+    --color-13: #aed4e6;
+    --color-14: #1ac8ed;
+
 }
 
 html,
@@ -29,7 +35,8 @@ body {
     */
     background: linear-gradient(to bottom,
             var(--color-1) 70%,
-            var(--color-2) 100%);
+            var(--color-2) 100%
+    );
 }
 
 /* SECCIONES EN GENERAL  */
@@ -72,17 +79,13 @@ p {
 /* PORTADA (HEADER)  */
 
 .portada {
-    background-image: url("./media/novios/ramo-transparente.JPG");
+    background: url("./media/novios/ramo-transparente.JPG") center/cover no-repeat;
     margin: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
     background-attachment: fixed;
 }
 
-/*
 .portada::before {
     content: "";
     position: absolute;
@@ -90,23 +93,28 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("./media/novios/ramo.JPG") center/cover no-repeat;
-    opacity: 0.5; Reduce la opacidad de la imagen
+    background:rgba(230, 212, 186, 0.4);
+    z-index: 100; /* Mantiene la capa sobre la imagen */
 }
-*/
 
 .portada p {
     font-style: italic;
+    color: var(--color-5);
+    z-index: 400;
+}
+.portada h3 {
     color: var(--color-5);
 }
 
 .nombres-novios h1 {
     position: relative;
     margin: 0;
-    color: var(--color-10);
+    color: var(--color-8);
     font-family: "Ms Madi", serif;
     font-weight: 500;
     font-size: 3em;
+    z-index: 400;
+
 }
 
 #h1-1 {
@@ -117,8 +125,6 @@ p {
 
 #h1-2 {
     font-size: 2em;
-    z-index: 2;
-    /* Colocar encima */
 }
 
 #h1-3 {
@@ -371,7 +377,7 @@ a:hover {
     /* Botones de Navegación */
     .prev,
     .next {
-        font-size: 2em;
+        font-size: 1.5em;
         width: 10%;
         transform: none;
         top: 40%;
