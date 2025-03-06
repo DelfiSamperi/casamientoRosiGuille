@@ -10,11 +10,12 @@
     --color-9: #9a9791;
     --color-10: #2c2f30;
 
-    --color-11: #ff8559;
-    --color-12: #ea672c; 
-    --color-13: #aed4e6;
-    --color-14: #1ac8ed;
-
+    --color-11: #f0956a /*#ee8858 #ed7a45 #ff8559*/;
+    --color-12: #eae0cc; 
+    --color-13: #ac4335 /*#772e25*/;
+    --color-14: #437c90;
+    --color-15: #171738;
+    --color-16: #2c2d24 /*#1d1e18*/;
 }
 
 html,
@@ -27,15 +28,12 @@ body {
     font-style: normal;
     display: flex;
     flex-direction: column;
-    color: var(--color-10);
     margin: 0;
     overflow-x: hidden;
-    /*
-    background-color: var(--color-1);
-    */
     background: linear-gradient(to bottom,
-            var(--color-1) 70%,
-            var(--color-2) 100%
+            var(--color-11) 0%,
+            var(--color-1) 60%,
+            var(--color-14) 100%
     );
 }
 
@@ -50,7 +48,7 @@ footer {
     width: 100%;
     height: auto;
     /*padding: 10em auto;*/
-    margin: 1.5em 0;
+    margin: 1em 0;
 }
 
 /* textos */
@@ -58,7 +56,7 @@ h3 {
     font-size: 0.9em;
     font-style: normal;
     font-weight: 300;
-    color: var(--color-4);
+    color: var(--color-13);
     /*margin-top: 2em;*/
 }
 
@@ -66,18 +64,18 @@ h5 {
     font-size: 0.9em;
     font-style: italic;
     font-weight: 200;
-    color: var(--color-3);
+    color: var(--color-14);
     /*margin-top: 1em ;*/
 }
 
 p {
     font-size: 0.7em;
     font-style: normal;
-    margin: auto 2em;
+    margin: 0.5em 2em;
+    color: var(--color-16);
 }
 
 /* PORTADA (HEADER)  */
-
 .portada {
     background: url("./media/novios/ramo-transparente.JPG") center/cover no-repeat;
     margin: 0;
@@ -97,13 +95,9 @@ p {
     z-index: 100; /* Mantiene la capa sobre la imagen */
 }
 
-.portada p {
+.portada p, .portada h3 {
     font-style: italic;
-    color: var(--color-5);
-    z-index: 400;
-}
-.portada h3 {
-    color: var(--color-5);
+    color: var(--color-10);
 }
 
 .nombres-novios h1 {
@@ -134,18 +128,14 @@ p {
 
 #playAudio {
     position: fixed;
-    /* Fijo en la pantalla */
     top: 0.9em;
     right: 10%;
     width: 3em;
-    /* Tamaño del icono */
     height: 3em;
     border-radius: 50%;
     border: none;
     cursor: pointer;
-    /* Hace que parezca un botón */
     z-index: 800;
-    /* Asegura que esté sobre otros elementos */
     transition: transform 0.2s ease-in-out;
     animation: float 1.5s infinite ease-in-out;
 }
@@ -169,7 +159,6 @@ p {
 
 #playAudio:active {
     transform: scale(0.9);
-    /* Efecto de clic */
     border: none;
     /* animation: vertical-shaking 0.7s infinite; */
 }
@@ -183,12 +172,11 @@ p {
     overflow: hidden;
     width: 80%;
     border-radius: 0.8em;
-    box-shadow: 0.3em 0.3em 0.8em var(--color-8);
+    box-shadow: 0.3em 0.3em 0.8em var(--color-13);
 }
 
 .extra-div {
     padding: 1em;
-
 }
 
 .icon {
@@ -205,8 +193,7 @@ p {
     align-self: center;
     max-width: 100px;
 */
-    }
-
+}
 
 /* GALERIA DE FOTOS  */
 .pics {
@@ -319,19 +306,25 @@ button {
     width: 40%;
     padding: 15px;
     font-size: 0.8em;
-    background-color: var(--color-3);
-    color: var(--color-1);
+    background-color: var(--color-14);
+    color: var(--color-12);
     border: none;
     border-radius: 10px;
 }
 
 a {
-    color: var(--color-3);
+    color: var(--color-14);
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--color-10);
+    color: var(--color-15);
+}
+
+footer h3 {
+    color: var(--color-1);
+    font-family: "Ms Madi", serif;
+    font-size: 2em;
 }
 
 @media(min-width: 500px) {
