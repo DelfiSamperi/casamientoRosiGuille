@@ -83,7 +83,9 @@ p {
     margin: 0;
     width: 100%;
     min-height: 100vh;
+    /*background-size: contain;*/
     background-attachment: fixed;
+    transform: translateZ(0);
 }
 
 .portada::before {
