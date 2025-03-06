@@ -69,6 +69,7 @@ h5 {
 }
 
 p {
+    font-family: "Montserrat", sans-serif;
     font-size: 0.7em;
     font-style: normal;
     margin: 0.5em 2em;
@@ -95,7 +96,14 @@ p {
     z-index: 100; /* Mantiene la capa sobre la imagen */
 }
 
-.portada p, .portada h3 {
+.portada p {
+    font-family: "Noto Serif Hentaigana", serif;
+    font-style: italic;
+    color: var(--color-10);
+    font-weight: 500;
+}
+
+.portada h3 {
     font-style: italic;
     color: var(--color-10);
 }
@@ -104,15 +112,13 @@ p {
     position: relative;
     margin: 0;
     color: var(--color-8);
-    font-family: "Ms Madi", serif;
+    font-family: "Ms Madi", cursive;
     font-weight: 500;
     font-size: 3em;
     z-index: 400;
-
 }
 
 #h1-1 {
-    /*background-color: #5a6b7c;*/
     transform: translateX(-50px);
     /* Ajuste a la izquierda */
 }
@@ -305,7 +311,8 @@ button {
     margin: 40px auto;
     width: 40%;
     padding: 15px;
-    font-size: 0.8em;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7em;
     background-color: var(--color-14);
     color: var(--color-12);
     border: none;
@@ -323,7 +330,7 @@ a:hover {
 
 footer h3 {
     color: var(--color-1);
-    font-family: "Ms Madi", serif;
+    font-family: "Ms Madi", cursive;
     font-size: 2em;
 }
 
