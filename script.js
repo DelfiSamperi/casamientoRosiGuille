@@ -52,6 +52,11 @@ document.addEventListener("DOMContentLoaded", function () {
     actualizarCuentaRegresiva(); // Llamar inmediatamente para que no haya espera de 1 segundo
 });
 
+//BOTON HACIA EL FORM
+document.getElementById("linkBtn").addEventListener("click", function() {
+    window.open("https://forms.gle/DMxDQtH1zAb2tRjh6", "_blank");
+});
+
 // lightbox de la galeria de imagenes
 
 const images = [
@@ -64,8 +69,7 @@ const images = [
     "./media/novios/agua2.JPG",
     "./media/novios/anillo.jpeg",
     "./media/novios/IMG_0150.JPG",
-    "./media/novios/IMG_0172.JPG",
-    "./media/novios/novios.jpeg"
+    "./media/novios/IMG_0172.JPG"
 ];
 
 let currentIndex = 0;

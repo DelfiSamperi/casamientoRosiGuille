@@ -44,12 +44,12 @@
 
     <section class="spots">
 
-        <h3>FESTEJEMOS JUNTOS</h3>
+        <h3>Nuestra Boda</h3>
         <div class="lugares">
             <div class="ceremonia">
                 <h5>Ceremonia</h5>
                 <p>12 de Octubre de 2025</p>
-                <p>12:00 hs</p>
+                <p>12:15 hs</p>
                 <p>Parroquia Nuestra Señora de los Dolores</p>
                 <p>Roque Sáenz Peña 464, Mendoza</p>
                 <a href="https://maps.app.goo.gl/xPPTuREE366yg7qw5" target="_blank">
@@ -59,7 +59,7 @@
             <div class="festejo">
                 <h5>Festejo</h5>
                 <p>12 de Octubre de 2025</p>
-                <p>14:00 hs</p>
+                <p>Almuerzo 14:00 hs | Baile 18:00 hs</p>
                 <p>Salón Terra Oliva</p>
                 <p>Videla Aranda 351, Maipú</p>
                 <a href="https://maps.app.goo.gl/WZmLS5r86FRt95XA7" target="_blank">
@@ -71,65 +71,72 @@
     </section>
 
     <section classname="extras">
-        
+        <!-- 
         <div class="extra-div" id="foto">
             <img class="fotito" src="./media/novios/novios.jpeg" alt="novios" />
         </div>
+        -->
 
         <div class="extra-div" id="dresscode">
             <img class="icon" src="./media/wedding-dress.png" alt="dress-code" />
             <h3>Dress Code</h3>
-            <p>Te venis vestidx super elegante porque es un casamiento de gente importante</p>
+            <p>En este día tan importante para nosotros te esperamos con tu atuendo más elegante y cómodo para bailar hasta el anochecer.</p>
         </div>
 
         <div class="extra-div" id="asistencia">
             <h3>¿Venís?</h3>
-            <p><a id='link' target="_blank" href="https://forms.gle/DMxDQtH1zAb2tRjh6">Confirmanos tu asistencia</a>
-                antes del 10 de Septiembre de 2025</p>
+            <p>Te pedimos que confirmes tu asistencia antes del 10 de Septiembre de 2025</p>
+            <a id='link'>
+                <button id="linkBtn">Confirmar asistencia</button>
+            </a>
+
         </div>
 
         <div class="extra-div" id="agendar">
             <img class="icon" src="./media/calendar.png" alt="dress-code" />
             <h3>Agendá la fecha</h3>
-            <p>lorem ipsum</p>
-            <button>agenda >></button>
+            <p></p>
+            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Boda%20de%20Rosi%20y%20Guille&dates=20251012T151500Z/20251012T250000Z&details=Ceremonia%20en%20Parroquia%20Nuestra%20Se%C3%B1ora%20de%20los%20Dolores%20y%20recepci%C3%B3n%20en%20Sal%C3%B3n%20Terra%20Oliva.&location=Parroquia%20Nuestra%20Se%C3%B1ora%20de%20los%20Dolores,%20Sal%C3%B3n%20Terra%20Oliva"
+            target="_blank">
+                <button>Agregar a Google Calendar</button>
+            </a>
         </div>
 
         <div class="extra-div" id="album">
             <img class="icon" src="./media/camera.png" alt="dress-code" />
             <h3>Unite al álbum</h3>
             <p>Acá podemos compartir las fotos que sacamos en la fiesta</p>
-            <button>Unirse >></button>
+            <button>Unirse</button>
         </div>
 
     </section>
+    <section>
+        <h3>Nosotros</h3>
+        <section class="pics">
+            <img src="./media/novios/novios2.jpeg" alt="novios2" onclick="openLightbox(0)" />
+            <img src="./media/novios/agua1.JPG" alt="agua1" onclick="openLightbox(1)" />
+            <img src="./media/novios/CIRY5282.JPG" alt="ciry" onclick="openLightbox(2)" />
+            <img src="./media/novios/IMG_0167.JPG" alt="0167" onclick="openLightbox(3)" />
+            <img src="./media/novios/IMG_0178.JPG" alt="0178" onclick="openLightbox(4)" />
+            <img src="./media/novios/IMG_0184.JPG" alt="0184" onclick="openLightbox(5)" />
+            <img src="./media/novios/agua2.JPG" alt="agua2" onclick="openLightbox(6)" />
+            <img src="./media/novios/anillo.jpeg" alt="anillo" onclick="openLightbox(7)" />
+            <img src="./media/novios/IMG_0150.JPG" alt="0150" onclick="openLightbox(8)" />
+            <img src="./media/novios/IMG_0172.JPG" alt="0172" onclick="openLightbox(9)" />
 
-    <section class="pics">
-        <img src="./media/novios/novios2.jpeg" alt="novios2" onclick="openLightbox(0)" />
-        <img src="./media/novios/agua1.JPG" alt="agua1" onclick="openLightbox(1)" />
-        <img src="./media/novios/CIRY5282.JPG" alt="ciry" onclick="openLightbox(2)" />
-        <img src="./media/novios/IMG_0167.JPG" alt="0167" onclick="openLightbox(3)" />
-        <img src="./media/novios/IMG_0178.JPG" alt="0178" onclick="openLightbox(4)" />
-        <img src="./media/novios/IMG_0184.JPG" alt="0184" onclick="openLightbox(5)" />
-        <img src="./media/novios/agua2.JPG" alt="agua2" onclick="openLightbox(6)" />
-        <img src="./media/novios/anillo.jpeg" alt="anillo" onclick="openLightbox(7)" />
-        <img src="./media/novios/IMG_0150.JPG" alt="0150" onclick="openLightbox(8)" />
-        <img src="./media/novios/IMG_0172.JPG" alt="0172" onclick="openLightbox(9)" />
-        <img src="./media/novios/novios.jpeg" alt="novios" onclick="openLightbox(10)" />
+            <!-- Lightbox (Pantalla completa) -->
+            <div id="lightbox" class="lightbox">
+                <span id="image-counter" class="image-counter"></span>
+                <span class="close" onclick="closeLightbox()">&times;</span>
+                <img id="lightbox-img" src="" alt="Imagen Ampliada">
+                <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+                <button class="next" onclick="changeImage(1)">&#10095;</button>
+            </div>
 
-        <!-- Lightbox (Pantalla completa) -->
-        <div id="lightbox" class="lightbox">
-            <span id="image-counter" class="image-counter"></span>
-            <span class="close" onclick="closeLightbox()">&times;</span>
-            <img id="lightbox-img" src="" alt="Imagen Ampliada">
-            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
-            <button class="next" onclick="changeImage(1)">&#10095;</button>
-        </div>
-
+        </section>
     </section>
-
     <footer>
-        <p>Te esperamos para festejar juntos...</p>
+        <p>¡Esperamos tu presencia en este momento tan importante para nosotros!</p>
         <h3>Rosi y Guille</h3>
     </footer>
 
