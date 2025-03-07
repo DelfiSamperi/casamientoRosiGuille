@@ -84,7 +84,7 @@ p {
     width: 100%;
     min-height: 100vh;
     background-attachment: fixed;
-    transform: translateZ(0);
+    /*transform: translateZ(0)*/
 }
 
 .portada::before {
