@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boda Rosi & Guille</title>
     <link rel="icon" type="image/png" sizes="32x32" href="./media/favicon-32x32.png">
-
+    <link rel="icon" href="./media/favicon-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="./media/favicon-180x180.png">
+    
     <link rel="stylesheet" href="styles.css" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,8 +19,9 @@
 
 <body>
     <header class='portada'>
-        <button id="playAudio">▶</button>
-
+       
+        <button class="button" id="playAudio" aria-label="Reproducir música">▶</button>
+        
         <h3>¡Nos casamos!</h3>
         <div class="nombres-novios">
             <h1 id="h1-1">Rosi</h1>
@@ -47,9 +50,7 @@
                 <p>12:15 hs</p>
                 <p>Parroquia Nuestra Señora de los Dolores</p>
                 <p>Roque Sáenz Peña 464, Mendoza</p>
-                <a href="https://maps.app.goo.gl/xPPTuREE366yg7qw5" target="_blank">
-                    <button id="iglesia">Cómo llegar</button>
-                </a>
+                <a href="https://maps.app.goo.gl/xPPTuREE366yg7qw5" target="_blank" class="button">Cómo llegar</a>
             </div>
             <div class="festejo">
                 <h5>Festejo</h5>
@@ -57,21 +58,14 @@
                 <p>Almuerzo 14:00 hs | Baile 18:00 hs</p>
                 <p>Salón Terra Oliva</p>
                 <p>Videla Aranda 351, Maipú</p>
-                <a href="https://maps.app.goo.gl/WZmLS5r86FRt95XA7" target="_blank">
-                    <button id="salon">Cómo llegar</button>
-                </a>
+                <a href="https://maps.app.goo.gl/WZmLS5r86FRt95XA7" target="_blank" class="button">Cómo llegar</a>
             </div>
         </div>
 
     </section>
 
-    <section classname="extras">
-        <!-- 
-        <div class="extra-div" id="foto">
-            <img class="fotito" src="./media/novios/novios.jpeg" alt="novios" />
-        </div>
-        -->
-
+    <section class="extras">
+      
         <div class="extra-div" id="dresscode">
             <img class="icon" src="./media/wedding-dress.png" alt="dress-code" />
             <h3>Dress Code</h3>
@@ -81,10 +75,7 @@
         <div class="extra-div" id="asistencia">
             <h3>¿Venís?</h3>
             <p>Te pedimos que confirmes tu asistencia antes del 10 de Septiembre de 2025</p>
-            <a id='link'>
-                <button id="linkBtn">Confirmar asistencia</button>
-            </a>
-
+            <a id="linkBtn">Confirmar asistencia</a>
         </div>
 
         <div class="extra-div" id="agendar">
@@ -92,33 +83,40 @@
             <h3>Agendá la fecha</h3>
             <p>Seguí el botón para agregar nuestro evento a tu calendario de Google.</p>
             <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Boda%20de%20Rosi%20y%20Guille&dates=20251012T151500Z/20251012T250000Z&details=Ceremonia%20en%20Parroquia%20Nuestra%20Se%C3%B1ora%20de%20los%20Dolores%20y%20recepci%C3%B3n%20en%20Sal%C3%B3n%20Terra%20Oliva.&location=Parroquia%20Nuestra%20Se%C3%B1ora%20de%20los%20Dolores,%20Sal%C3%B3n%20Terra%20Oliva"
-            target="_blank">
-                <button>Agregar</button>
-            </a>
+            target="_blank" class="button">Agregar</a>
         </div>
 
         <div class="extra-div" id="album">
             <img class="icon" src="./media/camera.png" alt="dress-code" />
             <h3>Unite al álbum</h3>
             <p>Para subir las fotos que hayas sacado en la fiesta y quieras compartir con nosotros.</p>
-            <button>Unirse</button>
+            <button class="button">Unirse</button>
         </div>
 
     </section>
     <section>
         <h3>Nosotros</h3>
         <section class="pics">
-            <img src="./media/novios/novios2.jpeg" alt="novios2" onclick="openLightbox(0)" />
-            <img src="./media/novios/agua1.JPG" alt="agua1" onclick="openLightbox(1)" />
-            <img src="./media/novios/CIRY5282.JPG" alt="ciry" onclick="openLightbox(2)" />
-            <img src="./media/novios/IMG_0167.JPG" alt="0167" onclick="openLightbox(3)" />
-            <img src="./media/novios/IMG_0178.JPG" alt="0178" onclick="openLightbox(4)" />
-            <img src="./media/novios/IMG_0184.JPG" alt="0184" onclick="openLightbox(5)" />
-            <img src="./media/novios/agua2.JPG" alt="agua2" onclick="openLightbox(6)" />
-            <img src="./media/novios/anillo.jpeg" alt="anillo" onclick="openLightbox(7)" />
-            <img src="./media/novios/IMG_0150.JPG" alt="0150" onclick="openLightbox(8)" />
-            <img src="./media/novios/IMG_0172.JPG" alt="0172" onclick="openLightbox(9)" />
-
+            <!-- 
+            <img src="./media/novios/agua1.JPG" alt="novios en el agua mirando al cerro" onclick="openLightbox(0)" />
+            <img src="./media/novios/IMG_0167.JPG" alt="novios abrazados" onclick="openLightbox(1)" />
+            <img src="./media/novios/IMG_0178.JPG" alt="novios sentados" onclick="openLightbox(2)" />
+            <img src="./media/novios/IMG_0184.JPG" alt="novio cargando a la novia" onclick="openLightbox(3)" />
+            <img src="./media/novios/agua2.JPG" alt="novios abrazados en el agua" onclick="openLightbox(4)" />
+            <img src="./media/novios/anillo.jpeg" alt="mostrando anillo de compromiso" onclick="openLightbox(5)" />
+            <img src="./media/novios/IMG_0150.JPG" alt="novios abrazando a la novia" onclick="openLightbox(6)" />
+            <img src="./media/novios/IMG_0172.JPG" alt="novios besandose" onclick="openLightbox(7)" />
+            -->
+             
+            <img src="./media/compressed/agua1.webp" alt="novios en el agua mirando al cerro" onclick="openLightbox(0)" />
+            <img src="./media/compressed/IMG_0167.webp" alt="novios abrazados" onclick="openLightbox(1)" />
+            <img src="./media/compressed/IMG_0178.webp" alt="novios sentados" onclick="openLightbox(2)" />
+            <img src="./media/compressed/IMG_0184.webp" alt="novio cargando a la novia" onclick="openLightbox(3)" />
+            <img src="./media/compressed/agua2.webp" alt="novios abrazados en el agua" onclick="openLightbox(4)" />
+            <img src="./media/compressed/anillo.webp" alt="mostrando anillo de compromiso" onclick="openLightbox(5)" />
+            <img src="./media/compressed/IMG_0150.webp" alt="novios abrazando a la novia" onclick="openLightbox(6)" />
+            <img src="./media/compressed/IMG_0172.webp" alt="novios besandose" onclick="openLightbox(7)" />
+            
             <!-- Lightbox (Pantalla completa) -->
             <div id="lightbox" class="lightbox">
                 <span id="image-counter" class="image-counter"></span>
@@ -136,7 +134,7 @@
     </footer>
 
     <!-- vinculo al archivos JS (se pone al final para permitir que el DOM se cargue antes) -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
 </body>
 
