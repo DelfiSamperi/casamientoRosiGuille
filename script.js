@@ -8,7 +8,7 @@ document.getElementById("playAudio").addEventListener("click", function() {
 */
 
 document.addEventListener("DOMContentLoaded", function () {
-    const audio = new Audio("./media/likePrayer.mp3");
+    const audio = new Audio('./media/casate-conmigo.mp3');
 
     //const audio = document.getElementById("audio");
     const button = document.getElementById("playAudio");
@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// --------------------------------------------
 
 //cuenta regresiva del casamiento
 
@@ -52,25 +53,26 @@ document.addEventListener("DOMContentLoaded", function () {
     actualizarCuentaRegresiva(); // Llamar inmediatamente para que no haya espera de 1 segundo
 });
 
+// ------------------------------------------------
+
 //BOTON HACIA EL FORM
-document.getElementById("linkBtn").addEventListener("click", function() {
+document.getElementById("linkBtn").addEventListener("click", function () {
     window.open("https://forms.gle/DMxDQtH1zAb2tRjh6", "_blank");
 });
 
+// ------------------------------------------------------
 // lightbox de la galeria de imagenes
-
 const images = [
-    "./media/novios/novios2.jpeg",
-    "./media/novios/agua1.JPG",
-    "./media/novios/CIRY5282.JPG",
-    "./media/novios/IMG_0167.JPG",
-    "./media/novios/IMG_0178.JPG",
-    "./media/novios/IMG_0184.JPG",
-    "./media/novios/agua2.JPG",
-    "./media/novios/anillo.jpeg",
-    "./media/novios/IMG_0150.JPG",
-    "./media/novios/IMG_0172.JPG"
+    "./media/compressed/agua1.webp",
+    "./media/compressed/IMG_0167.webp",
+    "./media/compressed/IMG_0178.webp",
+    "./media/compressed/IMG_0184.webp",
+    "./media/compressed/agua2.webp",
+    "./media/compressed/anillo.webp",
+    "./media/compressed/IMG_0150.webp",
+    "./media/compressed/IMG_0172.webp",
 ];
+
 
 let currentIndex = 0;
 
