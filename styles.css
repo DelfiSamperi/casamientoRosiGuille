@@ -152,6 +152,10 @@ p {
     z-index: 800;
     transition: transform 0.2s ease-in-out;
     animation: float 1.5s infinite ease-in-out;
+    /* para que la flecha siempre este al medio del boton */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @keyframes float {
@@ -177,14 +181,22 @@ p {
     /* animation: vertical-shaking 0.7s infinite; */
 }
 
-/*.extra-div {
-    padding: 1em;
-}*/
+.locations{
+    margin-top: 1.5em; 
+}
 
+.extras{
+    margin: 1.8em auto;
+}
+
+.extra-div {
+    padding: 1em 1em;
+}
+/*
 .extra-div p {
     font-size: 0.7em;
 }
-
+*/
 .icon {
     width: 15vw;
     height: auto;
@@ -192,29 +204,18 @@ p {
 }
 
 .button {
-    display: block;
-    margin: 40px auto;
-    width: 40%;
-    padding: 15px;
+    display: inline-block;
+    margin: 2em auto;
+    width: auto;
+    padding: 1em 2em;
     font-family: "Montserrat", sans-serif;
     font-size: 0.7em;
     background-color: var(--color-14);
     color: var(--color-12);
     border: none;
-    border-radius: 10px;
+    border-radius: 0.8em;
     text-decoration: none;
 }
-
-/*
-a {
-    color: var(--color-14);
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--color-15);
-}
-*/
 
 /* GALERIA DE FOTOS  */
 .pics {
