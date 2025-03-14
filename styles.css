@@ -181,6 +181,10 @@ p {
     padding: 1em;
 }
 
+.extra-div p {
+    font-size: 0.7em;
+}
+
 .icon {
     width: 15vw;
     height: auto;
