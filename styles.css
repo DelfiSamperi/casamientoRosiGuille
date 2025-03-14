@@ -153,9 +153,11 @@ p {
     transition: transform 0.2s ease-in-out;
     animation: float 1.5s infinite ease-in-out;
     /* para que la flecha siempre este al medio del boton */
+    /*
     display: flex;
     align-items: center;
     justify-content: center;
+    */
 }
 
 @keyframes float {
