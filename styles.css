@@ -72,7 +72,7 @@ p {
     font-family: "Montserrat", sans-serif;
     font-size: 0.7em;
     font-style: normal;
-    margin: 0.5em 2em;
+    margin: 0.5em 1.5em;
     color: var(--color-16);
 }
 
@@ -177,9 +177,9 @@ p {
     /* animation: vertical-shaking 0.7s infinite; */
 }
 
-.extra-div {
+/*.extra-div {
     padding: 1em;
-}
+}*/
 
 .extra-div p {
     font-size: 0.7em;
@@ -329,6 +329,7 @@ footer h3 {
     font-family: "Ms Madi", cursive;
     font-size: 2em;
 }
+
 /* PARA PANTALLAS MAS GRANDES */
 @media(min-width: 500px) {
     .lugares {
