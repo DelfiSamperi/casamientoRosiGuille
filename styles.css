@@ -105,13 +105,14 @@ p {
     font-style: italic;
     color: var(--color-5);
     font-weight: 300;
-    font-size: 0.7em;
+    font-size: 0.9em;
     position: relative;
     z-index: 3;
 }
 
 .portada h3 {
     font-style: italic;
+    /* font-size: 1em; */
     color: var(--color-5);
     z-index: 3;
 }
@@ -122,7 +123,7 @@ p {
     color: var(--color-8);
     font-family: "Ms Madi", cursive;
     font-weight: 500;
-    font-size: 3em;
+    font-size: 4em;
     z-index: 3;
 }
 
@@ -132,7 +133,7 @@ p {
 }
 
 #h1-2 {
-    font-size: 2em;
+    font-size: 3em;
 }
 
 #h1-3 {
@@ -144,8 +145,8 @@ p {
     position: fixed;
     top: 0.9em;
     right: 10%;
-    width: 3em;
-    height: 3em;
+    width: 3.5em;
+    height: 3.5em;
     border-radius: 50%;
     border: none;
     cursor: pointer;
@@ -153,11 +154,9 @@ p {
     transition: transform 0.2s ease-in-out;
     animation: float 1.5s infinite ease-in-out;
     /* para que la flecha siempre este al medio del boton */
-    /*
     display: flex;
     align-items: center;
     justify-content: center;
-    */
 }
 
 @keyframes float {
