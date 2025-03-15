@@ -47,8 +47,8 @@ footer {
     justify-content: space-evenly;
     width: 100%;
     height: auto;
-    /*padding: 10em auto;*/
-    margin: 1em 0;
+    /* padding: 1em auto; */
+    /*margin: 1em 0;*/
 }
 
 /* textos */
@@ -182,6 +182,29 @@ p {
     /* animation: vertical-shaking 0.7s infinite; */
 }
 
+/* SECCION FECHA */
+.fecha {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    /*min-height: 80vh;*/
+    display: flex;
+    flex-direction: column;
+   /* justify-content: center;
+    align-items: center;
+    text-align: center; */
+}
+
+#marco-sup {
+    margin-top: -20%;
+}
+
+#marco-inf {
+    margin-bottom: 0;
+}
+
+/*   */
 .locations{
     margin-top: 1.5em; 
 }
