@@ -48,12 +48,12 @@ footer {
     width: 100%;
     height: auto;
     /* padding: 1em auto; */
-    margin: 1em 0;
+    margin: 2em 0;
 }
 
 /* textos */
 h3 {
-    font-size: 0.9em;
+    font-size: 1em;
     font-style: normal;
     font-weight: 400;
     color: var(--color-13);
@@ -191,9 +191,14 @@ p {
     min-height: 80vh;
     display: flex;
     flex-direction: column;
-   /* justify-content: center;
+    justify-content: center;
     align-items: center;
+    /*justify-content: center;
     text-align: center; */
+}
+
+.fecha h3 {
+    margin: 5em auto;
 }
 
 #marco-sup, #marco-inf {
