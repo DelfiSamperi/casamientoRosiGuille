@@ -20,23 +20,46 @@ document.addEventListener("DOMContentLoaded", function () {
 // --------------------------------------------
 // desplazar desde portada a fecha
 
+// document.addEventListener("DOMContentLoaded", function () {
+//     const scrollToFecha = document.getElementById("scrollToFecha");
+//     const fechaSection = document.getElementById("extras");
+
+//     scrollToFecha.addEventListener("click", function () {
+//         fechaSection.scrollIntoView({ behavior: "smooth", block: "start"});
+//     });
+//     /*
+//     scrollToFecha.addEventListener("click", function () {
+//         window.scrollTo({
+//             top: fechaSection.offsetTop,
+//             behavior: "smooth"
+//         });
+//     });
+//     */    
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
-    const scrollToFecha = document.getElementById("scrollToFecha");
-    const fechaSection = document.getElementById("extras");
+    if (window.innerWidth <= 500) { 
+        let sections = document.querySelectorAll("section");
+        let currentSection = 0;
+        let isScrolling = false;
 
-    scrollToFecha.addEventListener("click", function () {
-        fechaSection.scrollIntoView({ behavior: "smooth", block: "start"});
-    });
-    /*
-    scrollToFecha.addEventListener("click", function () {
-        window.scrollTo({
-            top: fechaSection.offsetTop,
-            behavior: "smooth"
+        window.addEventListener("wheel", function (event) {
+            if (isScrolling) return;
+
+            isScrolling = true;
+
+            if (event.deltaY > 0) {
+                if (currentSection < sections.length - 1) currentSection++;
+            } else {
+                if (currentSection > 0) currentSection--;
+            }
+
+            sections[currentSection].scrollIntoView({ behavior: "auto", block: "start" });
+
+            setTimeout(() => { isScrolling = false; }, 500);
         });
-    });
-    */    
+    }
 });
-
 
 // --------------------------------------------
 
@@ -128,6 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // URLs de las tiendas
     const androidLink = "https://play.google.com/store/apps/details?id=social.onelife";
     const iosLink = "https://apps.apple.com/es/app/dots-memories-foto-y-v%C3%ADdeo/id6449039420";
+
 
     // Detectar sistema operativo
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
