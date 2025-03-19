@@ -119,3 +119,25 @@ document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowLeft") changeImage(-1);
 });
 
+//---------------------------------------
+// Descargar Dots Memories
+
+document.addEventListener("DOMContentLoaded", function () {
+    const downloadBtn = document.getElementById("descargarApp");
+
+    // URLs de las tiendas
+    const androidLink = "https://play.google.com/store/apps/details?id=social.onelife";
+    const iosLink = "https://apps.apple.com/es/app/dots-memories-foto-y-v%C3%ADdeo/id6449039420";
+
+    // Detectar sistema operativo
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    if (/android/i.test(userAgent)) {
+        downloadBtn.href = androidLink;
+    } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
+        downloadBtn.href = iosLink;
+    } else {
+        // Enlace por defecto (puede ser una página de información)
+        downloadBtn.href = "#";
+        downloadBtn.textContent = "Descargar en tu dispositivo";
+    }
+});
