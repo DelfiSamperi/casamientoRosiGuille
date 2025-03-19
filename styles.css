@@ -28,8 +28,10 @@ body {
     font-style: normal;
     display: flex;
     flex-direction: column;
+    /*display: block;*/
     margin: 0;
     overflow-x: hidden;
+    scroll-behavior: smooth;
     background: linear-gradient(to bottom,
             var(--color-11) 0%,
             var(--color-1) 60%,
@@ -47,8 +49,8 @@ footer {
     justify-content: space-evenly;
     width: 100%;
     height: auto;
-    /* padding: 1em auto; */
-    margin: 2em 0;
+    /*padding: 1em auto;*/
+    /*margin: 2em 0; */
 }
 
 /* textos */
@@ -182,6 +184,28 @@ p {
     /* animation: vertical-shaking 0.7s infinite; */
 }
 
+#scrollToFecha {
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: var(--color-10);
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+}
+
 /* SECCION FECHA */
 .fecha {
     position: relative;
@@ -199,6 +223,7 @@ p {
 
 .fecha h3 {
     margin: 5em auto;
+    color: var(--color-14);
 }
 
 #marco-sup, #marco-inf {
@@ -262,6 +287,10 @@ p {
     justify-content: center;
     align-items: center;
     gap: 1em;
+}
+
+.pics-h3{
+    margin: 2em auto;
 }
 
 .pics img {
@@ -366,6 +395,13 @@ footer h3 {
     color: var(--color-1);
     font-family: "Ms Madi", cursive;
     font-size: 2em;
+}
+
+footer img{
+    width: 40vw;
+    height: auto;
+    place-self: center;
+    margin-top: 2.5em;
 }
 
 /* PARA PANTALLAS MAS GRANDES */

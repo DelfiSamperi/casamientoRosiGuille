@@ -31,9 +31,19 @@
         <div class="frase">
             <p>"El amor sobrelleva y soporta, arriesga y equilibra, el amor vence todo."</p>
         </div>
+        
+        <button id="scrollToFecha" aria-label="Ir a la siguiente sección">
+            <img src="./media/iconos/angulo.webp" alt="Flecha abajo" class="icon">
+        </button>
+        
+        <!-- 
+        <a href="#fecha" id="scrollToFecha" class="button">
+            <img src="./media/iconos/angulo.webp" alt="Flecha abajo" class="icon">
+        </a>
+        -->
     </header>
 
-    <section class="fecha">
+    <section class="fecha" id="fecha">
         <img id="marco-sup" src="./media/flores/marco-superior.webp" alt="marco superior de flores" loading="lazy" />
         <h3> 12 de Octubre de 2025</h3>
         <div class="countdown">
@@ -67,17 +77,17 @@
 
     </section>
 
-    <section class="extras">
+    <section class="extras" id="extras">
       
         <div class="extra-div" id="dresscode">
             <img class="icon" src="./media/icons/wedding-dress.webp" alt="dress-code" loading="lazy" />
             <h3>Dress Code</h3>
-            <p>En este día tan importante para nosotros te esperamos con tu atuendo más elegante y cómodo para bailar hasta el anochecer.</p>
+            <p>Te esperamos con tu atuendo más elegante y cómodo para bailar hasta el anochecer junto a nosotros.</p>
         </div>
 
         <div class="extra-div" id="asistencia">
             <h3>¿Venís?</h3>
-            <p>Te pedimos que confirmes tu asistencia antes del 10 de Septiembre de 2025</p>
+            <p>Te pedimos que confirmes tu asistencia antes del 10 de Septiembre de 2025.</p>
             <a id="linkBtn" class="button">Confirmar asistencia</a>
         </div>
 
@@ -92,14 +102,15 @@
         <div class="extra-div" id="album">
             <img class="icon" src="./media/icons/camera.webp" alt="camara" loading="lazy"/>
             <h3>Unite al álbum</h3>
-            <p>Para subir las fotos que hayas sacado en la fiesta y quieras compartir con nosotros.</p>
+            <p>Los invitamos a compartir las fotos tomadas en la fiesta.</p>
             <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Boda%20de%20Rosi%20y%20Guille&dates=20251012T151500Z/20251012T250000Z&details=Ceremonia%20en%20Parroquia%20Nuestra%20Se%C3%B1ora%20de%20los%20Dolores%20y%20recepci%C3%B3n%20en%20Sal%C3%B3n%20Terra%20Oliva.&location=Parroquia%20Nuestra%20Se%C3%B1ora%20de%20los%20Dolores,%20Sal%C3%B3n%20Terra%20Oliva"
             target="_blank" class="button">Unirse</a>
         </div>
 
     </section>
     <section>
-        <h3>Nosotros</h3>
+        <h3 class="pics-h3">Nosotros</h3>
+        
         <section class="pics">
                        
             <img src="./media/compressed/agua1.webp" alt="novios en el agua mirando al cerro" loading="lazy" onclick="openLightbox(0)" />
@@ -123,7 +134,8 @@
         </section>
     </section>
     <footer>
-        <p>¡Esperamos nos acompañes en este momento tan importante para nosotros!</p>
+        <img src="./media/flores/ramito.webp" alt="florcitas" />
+        <p>¡Te esperamos para festejar junto a nosotros!</p>
         <h3>Rosi y Guille</h3>
     </footer>
 

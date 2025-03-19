@@ -1,12 +1,5 @@
 //CARGA DEL ARCHIVO DE AUDIO
 
-/*
-document.getElementById("playAudio").addEventListener("click", function() {
-    const audio = new Audio("./media/likePrayer.mp3");
-    audio.play();
-});
-*/
-
 document.addEventListener("DOMContentLoaded", function () {
     const audio = new Audio('./media/casate-conmigo.mp3');
 
@@ -23,6 +16,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// --------------------------------------------
+// desplazar desde portada a fecha
+
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollToFecha = document.getElementById("scrollToFecha");
+    const fechaSection = document.getElementById("extras");
+
+    scrollToFecha.addEventListener("click", function () {
+        fechaSection.scrollIntoView({ behavior: "smooth", block: "start"});
+    });
+    /*
+    scrollToFecha.addEventListener("click", function () {
+        window.scrollTo({
+            top: fechaSection.offsetTop,
+            behavior: "smooth"
+        });
+    });
+    */    
+});
+
 
 // --------------------------------------------
 
