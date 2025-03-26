@@ -18,9 +18,11 @@
     --color-16: #2c2d24 /*#1d1e18*/;
 }
 
+
 html,
 body {
     font-family: "Noto Serif Hentaigana", serif;
+    /*font-family: "Montserrat", sans-serif;*/
     font-optical-sizing: auto;
     font-weight: 400;
     font-size: 1.2em;
@@ -39,7 +41,7 @@ body {
     );
 }
 
-/* SECCIONES EN GENERAL  */
+/* SECCIONES EN GENERAL */
 
 header,
 section,
