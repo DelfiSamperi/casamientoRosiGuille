@@ -1,26 +1,18 @@
 :root {
-    --color-1: #e6d4ba;
-    --color-2: #9bb4d3;
-    --color-3: #3f94ac;
-    --color-4: #946432;
+    --background-1: #f0956a; /* 11 */
+    --background-2: #e6d4ba; /* 1 */
+    --background-3: #437c90; /* 14 */
     --color-5: #69351d;
-    --color-6: #c2d1d2;
-    --color-7: #5a6b7c;
     --color-8: #7b5f59;
-    --color-9: #9a9791;
     --color-10: #2c2f30;
-
-    --color-11: #f0956a; /*#ee8858 #ed7a45 #ff8559*/
-    --color-12: #eae0cc; 
-    --color-13: #ac4335 /*#772e25*/;
-    --color-14: #437c90;
-    --color-15: #171738;
-    --color-16: #2c2d24 /*#1d1e18*/;
+    --button-text: #eae0cc; 
+    --color-13: #ac4335;
+    --parrafos: #2c2d24;
 }
 
 html,
 body {
-    font-family: "Noto Serif Hentaigana", serif;
+    font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-size: 1.2em;
@@ -31,15 +23,15 @@ body {
     /*display: block;*/
     margin: 0;
     overflow-x: hidden;
-    scroll-behavior: smooth;
+    /*scroll-behavior: smooth;*/
     background: linear-gradient(to bottom,
-            var(--color-11) 0%,
-            var(--color-1) 60%,
-            var(--color-14) 100%
+            var(--background-1) 0%,
+            var(--background-2) 60%,
+            var(--background-3) 100%
     );
 }
 
-/* SECCIONES EN GENERAL  */
+/* SECCIONES EN GENERAL */
 
 header,
 section,
@@ -55,6 +47,7 @@ footer {
 
 /* textos */
 h3 {
+    font-family: "Noto Serif Hentaigana", serif;
     font-size: 1em;
     font-style: normal;
     font-weight: 400;
@@ -63,24 +56,25 @@ h3 {
 }
 
 h5 {
+    font-family: "Noto Serif Hentaigana", serif;
     font-size: 0.9em;
     font-style: italic;
     font-weight: 400;
-    color: var(--color-14);
+    color: var(--background-3);
     /*margin-top: 1em ;*/
 }
 
 p {
-    font-family: "Montserrat", sans-serif;
     font-size: 0.7em;
     font-style: normal;
     margin: 0.5em 1.5em;
-    color: var(--color-16);
+    color: var(--parrafos);
 }
 
 /* PORTADA (HEADER)  */
 .portada {
-    position: relative;
+    /*
+    position: relative;*/
     background: url("./media/ramo-transparente.webp") center/cover no-repeat;
     margin: 0;
     width: 100%;
@@ -184,7 +178,7 @@ p {
     /* animation: vertical-shaking 0.7s infinite; */
 }
 
-#scrollToFecha {
+#scrollToFecha, #scrollToSpots {
     position: absolute;
     bottom: 1em;
     left: 50%;
@@ -195,6 +189,7 @@ p {
     cursor: pointer;
     color: var(--color-10);
     animation: bounce 1.5s infinite;
+    z-index: 3;
 }
 
 @keyframes bounce {
@@ -223,7 +218,7 @@ p {
 
 .fecha h3 {
     margin: 5em auto;
-    color: var(--color-14);
+    color: var(--background-3);
 }
 
 #marco-sup, #marco-inf {
@@ -270,10 +265,9 @@ p {
     margin: 2em auto;
     width: auto;
     padding: 1em 2em;
-    font-family: "Montserrat", sans-serif;
     font-size: 0.7em;
-    background-color: var(--color-14);
-    color: var(--color-12);
+    background-color: var(--background-3);
+    color: var(--button-text);
     border: none;
     border-radius: 0.8em;
     text-decoration: none;
@@ -392,7 +386,7 @@ p {
 /* ------- */
 
 footer h3 {
-    color: var(--color-1);
+    color: var(--background-2);
     font-family: "Ms Madi", cursive;
     font-size: 2em;
 }
