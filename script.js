@@ -20,22 +20,16 @@ document.addEventListener("DOMContentLoaded", function () {
 // --------------------------------------------
 // desplazar desde portada a fecha
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     const scrollToFecha = document.getElementById("scrollToFecha");
-//     const fechaSection = document.getElementById("extras");
-
-//     scrollToFecha.addEventListener("click", function () {
-//         fechaSection.scrollIntoView({ behavior: "smooth", block: "start"});
-//     });
-//     /*
-//     scrollToFecha.addEventListener("click", function () {
-//         window.scrollTo({
-//             top: fechaSection.offsetTop,
-//             behavior: "smooth"
-//         });
-//     });
-//     */    
-// });
+document.querySelector("#scrollToFecha").addEventListener("click", function (event) {
+    event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+    document.querySelector("#fecha").scrollIntoView({ behavior: "smooth" });
+});
+  
+document.querySelector("#scrollToSpots").addEventListener("click", function (event) {
+    event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+    document.querySelector(".spots").scrollIntoView({ behavior: "smooth" });
+});
+  
 
 document.addEventListener("DOMContentLoaded", function () {
     if (window.innerWidth <= 500) { 
