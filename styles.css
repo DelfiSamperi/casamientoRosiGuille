@@ -4,10 +4,10 @@
     --background-3: #437c90; /* 14 */
     --textos-portada: #69351d; /* 5 */
     --nombres-novios: #7b5f59; /* 8 */
-    --color-10: #2c2f30;
     --button-text: #eae0cc; 
     --titulos-h3: #ac4335; /* 13 */
     --parrafos: #2c2d24;
+    --color-10: #2c2f30;
 }
 
 html,
@@ -20,10 +20,8 @@ body {
     font-style: normal;
     display: flex;
     flex-direction: column;
-    /*display: block;*/
     margin: 0;
     overflow-x: hidden;
-    /*scroll-behavior: smooth;*/
     background: linear-gradient(to bottom,
             var(--background-1) 0%,
             var(--background-2) 60%,
@@ -38,11 +36,10 @@ section,
 footer {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
     height: auto;
-    /*padding: 1em auto;*/
-    /*margin: 2em 0; */
+    /*padding-top: 1em; */
 }
 
 /* textos */
@@ -73,16 +70,12 @@ p {
 
 /* PORTADA (HEADER)  */
 .portada {
-    /*
-    position: relative;*/
     background: url("./media/ramo-transparente.webp") center/cover no-repeat;
     margin: 0;
     width: 100%;
     height: 100vh;
     min-height: 80vh;
     background-attachment: fixed;
-    /*background-attachment: scroll;*/
-    /*transform: translateZ(0)*/
 }
 
 .portada::before {
@@ -108,7 +101,6 @@ p {
 
 .portada h3 {
     font-style: italic;
-    /* font-size: 1em; */
     color: var(--textos-portada);
     z-index: 3;
 }
@@ -213,13 +205,11 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*justify-content: center;
-    text-align: center; */
 }
 
 .fecha h3 {
     margin: 5em auto;
-    color: var(--background-3);
+    color: var(--titulos-h3);
 }
 
 #marco-sup, #marco-inf {
@@ -238,23 +228,25 @@ p {
     bottom: 0;
 }
 
-/*   */
-.locations{
-    margin-top: 1.5em; 
+/* SECCION SPOTS  */
+
+.spots{
+    padding-top: 1em;
 }
 
+.locations h5{
+    margin: 1em;
+}
+
+/* SECCION EXTRAS */
 .extras{
-    margin: 1.8em auto;
+    margin-top: 1em;
 }
 
 .extra-div {
-    padding: 1em 1em;
+    padding: 1em;
 }
-/*
-.extra-div p {
-    font-size: 0.7em;
-}
-*/
+
 .icon {
     width: 15vw;
     height: auto;
@@ -263,7 +255,7 @@ p {
 
 .button {
     display: inline-block;
-    margin: 2em auto;
+    margin: 1.5em auto;
     width: auto;
     padding: 1em 2em;
     font-size: 0.7em;
@@ -285,7 +277,8 @@ p {
 }
 
 .pics-h3{
-    margin: 2em auto;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
 }
 
 .pics img {
@@ -390,13 +383,15 @@ footer h3 {
     color: var(--background-2);
     font-family: "Ms Madi", cursive;
     font-size: 2em;
+    margin: 1em;
 }
 
 footer img{
-    width: 40vw;
+    width: 35vw;
     height: auto;
     place-self: center;
-    margin-top: 2.5em;
+    margin-top: 3em;
+    margin-bottom: 1em;
 }
 
 /* PARA PANTALLAS MAS GRANDES */
