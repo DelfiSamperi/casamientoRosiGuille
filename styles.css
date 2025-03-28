@@ -70,6 +70,7 @@ p {
 
 /* PORTADA (HEADER)  */
 .portada {
+    position: relative;
     background: url("./media/ramo-transparente.webp") center/cover no-repeat;
     margin: 0;
     width: 100%;
