@@ -2,11 +2,11 @@
     --background-1: #f0956a; /* 11 */
     --background-2: #e6d4ba; /* 1 */
     --background-3: #437c90; /* 14 */
-    --color-5: #69351d;
-    --color-8: #7b5f59;
+    --textos-portada: #69351d; /* 5 */
+    --nombres-novios: #7b5f59; /* 8 */
     --color-10: #2c2f30;
     --button-text: #eae0cc; 
-    --color-13: #ac4335;
+    --titulos-h3: #ac4335; /* 13 */
     --parrafos: #2c2d24;
 }
 
@@ -51,7 +51,7 @@ h3 {
     font-size: 1em;
     font-style: normal;
     font-weight: 400;
-    color: var(--color-13);
+    color: var(--titulos-h3);
     /*margin-top: 2em;*/
 }
 
@@ -99,7 +99,7 @@ p {
 .portada p {
     font-family: "Noto Serif Hentaigana", serif;
     font-style: italic;
-    color: var(--color-5);
+    color: var(--textos-portada);
     font-weight: 300;
     font-size: 0.9em;
     position: relative;
@@ -109,14 +109,14 @@ p {
 .portada h3 {
     font-style: italic;
     /* font-size: 1em; */
-    color: var(--color-5);
+    color: var(--textos-portada);
     z-index: 3;
 }
 
 .nombres-novios h1 {
     position: relative;
     margin: 0;
-    color: var(--color-8);
+    color: var(--nombres-novios);
     font-family: "Ms Madi", cursive;
     font-weight: 500;
     font-size: 4em;
@@ -175,19 +175,20 @@ p {
 #playAudio:active {
     transform: scale(0.9);
     border: none;
-    /* animation: vertical-shaking 0.7s infinite; */
 }
 
 #scrollToFecha, #scrollToSpots {
-    position: absolute;
-    bottom: 1em;
-    left: 50%;
+    position: relative;
+    /*bottom: 1em;
+    left: 50%; */
+    margin: 0.5em auto;
+    left: 10% ;
     transform: translateX(-50%);
     background: none;
     border: none;
-    font-size: 2em;
+    font-size: 1.5em;
     cursor: pointer;
-    color: var(--color-10);
+    color: var(--textos-portada);
     animation: bounce 1.5s infinite;
     z-index: 3;
 }
