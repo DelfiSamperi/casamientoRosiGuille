@@ -94,14 +94,14 @@ document.getElementById("linkBtn").addEventListener("click", function () {
 // ------------------------------------------------------
 // lightbox de la galeria de imagenes
 const images = [
-    "./media/compressed/agua1.webp",
-    "./media/compressed/IMG_0167.webp",
-    "./media/compressed/IMG_0178.webp",
-    "./media/compressed/IMG_0184.webp",
-    "./media/compressed/agua2.webp",
-    "./media/compressed/anillo.webp",
-    "./media/compressed/IMG_0150.webp",
-    "./media/compressed/IMG_0172.webp",
+    "./media/fotos-novios/agua1.webp",
+    "./media/fotos-novios/IMG_0167.webp",
+    "./media/fotos-novios/IMG_0178.webp",
+    "./media/fotos-novios/IMG_0184.webp",
+    "./media/fotos-novios/agua2.webp",
+    "./media/fotos-novios/anillo.webp",
+    "./media/fotos-novios/IMG_0150.webp",
+    "./media/fotos-novios/IMG_0172.webp",
 ];
 
 
@@ -135,6 +135,31 @@ document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowRight") changeImage(1);
     if (event.key === "ArrowLeft") changeImage(-1);
 });
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+const lightbox = document.getElementById('lightbox');
+
+lightbox.addEventListener('touchstart', function (e) {
+    touchStartX = e.changedTouches[0].screenX;
+}, false);
+
+lightbox.addEventListener('touchend', function (e) {
+    touchEndX = e.changedTouches[0].screenX;
+    handleGesture();
+}, false);
+
+function handleGesture() {
+    const threshold = 50; // px de movimiento mínimo
+    if (touchEndX < touchStartX - threshold) {
+        changeImage(1); // deslizó a la izquierda
+    }
+    if (touchEndX > touchStartX + threshold) {
+        changeImage(-1); // deslizó a la derecha
+    }
+}
+
 
 //---------------------------------------
 // Descargar Dots Memories

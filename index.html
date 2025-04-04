@@ -33,7 +33,7 @@
         </div>
         
         <button id="scrollToFecha" aria-label="Ir a la siguiente sección">
-            <img src="./media/iconos/angulo.webp" alt="Flecha abajo" class="icon">
+            <img src="./media/iconos/down.webp" alt="Flecha abajo" class="icon">
         </button>
         
     </header>
@@ -47,7 +47,7 @@
             <h5 id="timer"></h5>
         </div>
         <button id="scrollToSpots" aria-label="Ir a la siguiente sección">
-            <img src="./media/iconos/angulo.webp" alt="Flecha abajo" class="icon">
+            <img src="./media/iconos/down.webp" alt="Flecha abajo" class="icon">
         </button>
         <img id="marco-inf" src="./media/flores/marco-inferior.webp" alt="marco inferior de flores" loading="lazy" />
     </section>
@@ -81,7 +81,7 @@
     <section class="extras" id="extras">
       
         <div class="extra-div" id="dresscode">
-            <img class="icon" src="./media/icons/wedding-dress.webp" alt="dress-code" loading="lazy" />
+            <img class="icon" src="./media/iconos/wedding-dress.webp" alt="dress-code" loading="lazy" />
             <h3>Dress Code</h3>
             <p>Te esperamos con tu atuendo más elegante y cómodo para bailar hasta el anochecer junto a nosotros.</p>
         </div>
@@ -102,7 +102,7 @@
         </div>
 
         <div class="extra-div" id="album">
-            <img class="icon" src="./media/icons/camera.webp" alt="camara" loading="lazy"/>
+            <img class="icon" src="./media/iconos/camera.webp" alt="camara" loading="lazy"/>
             <h3>Unite al álbum</h3>
             <p>Unite a nuestro album de Dots Memories para compartir las fotos que tomes de nuestro gran día.</p>
             <a id="descargarApp" class="button" href="#" target="_blank" rel="noopener noreferrer">
@@ -112,25 +112,30 @@
         </div>
 
     </section>
+
     <section>
         <h3 class="pics-h3">Nosotros</h3>
         
         <section class="pics">
                        
-            <img src="./media/compressed/agua1.webp" alt="novios en el agua mirando al cerro" loading="lazy" onclick="openLightbox(0)" />
-            <img src="./media/compressed/IMG_0167.webp" alt="novios abrazados" loading="lazy" onclick="openLightbox(1)" />
-            <img src="./media/compressed/IMG_0178.webp" alt="novios sentados" loading="lazy" onclick="openLightbox(2)" />
-            <img src="./media/compressed/IMG_0184.webp" alt="novio cargando a la novia" loading="lazy" onclick="openLightbox(3)" />
-            <img src="./media/compressed/agua2.webp" alt="novios abrazados en el agua" loading="lazy" onclick="openLightbox(4)" />
-            <img src="./media/compressed/anillo.webp" alt="mostrando anillo de compromiso" loading="lazy" onclick="openLightbox(5)" />
-            <img src="./media/compressed/IMG_0150.webp" alt="novios abrazando a la novia" loading="lazy" onclick="openLightbox(6)" />
-            <img src="./media/compressed/IMG_0172.webp" alt="novios besandose" loading="lazy" onclick="openLightbox(7)" />
+            <img src="./media/fotos-novios/agua1.webp" alt="novios en el agua mirando al cerro" loading="lazy" onclick="openLightbox(0)" />
+            <img src="./media/fotos-novios/IMG_0167.webp" alt="novios abrazados" loading="lazy" onclick="openLightbox(1)" />
+            <img src="./media/fotos-novios/IMG_0178.webp" alt="novios sentados" loading="lazy" onclick="openLightbox(2)" />
+            <img src="./media/fotos-novios/IMG_0184.webp" alt="novio cargando a la novia" loading="lazy" onclick="openLightbox(3)" />
+            <img src="./media/fotos-novios/agua2.webp" alt="novios abrazados en el agua" loading="lazy" onclick="openLightbox(4)" />
+            <img src="./media/fotos-novios/anillo.webp" alt="mostrando anillo de compromiso" loading="lazy" onclick="openLightbox(5)" />
+            <img src="./media/fotos-novios/IMG_0150.webp" alt="novios abrazando a la novia" loading="lazy" onclick="openLightbox(6)" />
+            <img src="./media/fotos-novios/IMG_0172.webp" alt="novios besandose" loading="lazy" onclick="openLightbox(7)" />
             
             <!-- Lightbox (Pantalla completa) -->
             <div id="lightbox" class="lightbox">
-                <span id="image-counter" class="image-counter"></span>
-                <span class="close" onclick="closeLightbox()">&times;</span>
-                <img id="lightbox-img" src="" alt="Imagen Ampliada">
+                
+                <div class="lightbox-content"> 
+                    <span id="image-counter" class="image-counter"></span>
+                    <span class="close" onclick="closeLightbox()">&times;</span>
+                    <img id="lightbox-img" src="" alt="Imagen Ampliada">
+                </div>
+                
                 <button class="prev" onclick="changeImage(-1)">&#10094;</button>
                 <button class="next" onclick="changeImage(1)">&#10095;</button>
             </div>
