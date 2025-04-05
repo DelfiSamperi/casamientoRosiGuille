@@ -184,3 +184,14 @@ document.addEventListener("DOMContentLoaded", function () {
         downloadBtn.textContent = "Descargar en tu dispositivo";
     }
 });
+
+// CAMBIAR EL ICONO DE LA SECCION FECHA POR EL MAS OSCURO
+
+// Detecta si el ancho es mayor a 500px y cambia la imagen
+window.addEventListener('DOMContentLoaded', () => {
+    const iconScroll = document.getElementById('scrollIcon');
+    if (window.innerWidth > 500) {
+      iconScroll.src = './media/iconos/angulo.webp';
+    }
+});
+  

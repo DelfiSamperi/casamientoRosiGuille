@@ -7,7 +7,7 @@
     --button-text: #eae0cc; 
     --titulos-h3: #ac4335; /* 13 */
     --parrafos: #2c2d24;
-    --color-10: #2c2f30;
+    --img-gallery: #2c2f30;
 }
 
 html,
@@ -39,6 +39,7 @@ footer {
     justify-content: space-evenly;
     width: 100%;
     height: auto;
+    align-items: center;
     /*padding-top: 1em; */
 }
 
@@ -172,11 +173,11 @@ p {
 
 #scrollToFecha, #scrollToSpots {
     position: relative;
+    left: 10% ;
     /*bottom: 1em;
     left: 50%; */
     margin: 0.5em auto;
-    left: 10% ;
-    transform: translateX(-50%);
+    /*transform: translateX(-50%);*/
     background: none;
     border: none;
     font-size: 1.5em;
@@ -185,19 +186,7 @@ p {
     animation: bounce 1.5s infinite;
     z-index: 3;
 }
-/*
-#scrollToFecha::before, #scrollToSpots::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background:rgba(105, 53, 29, 0.3);
-    z-index: 4;
-    border-radius: 50%;
-} 
-*/
+
 @keyframes bounce {
     0%, 100% {
         transform: translateX(-50%) translateY(0);
@@ -263,7 +252,6 @@ p {
 .icon {
     width: 15vw;
     height: auto;
-    place-self: center;
 }
 
 .button {
@@ -352,7 +340,7 @@ p {
     top: 5%;
     right: 10%;
     font-size: 1.3em;
-    color: var(--color-10);
+    color: var(--img-gallery);
     cursor: pointer;
 }
 .close:hover{
@@ -364,7 +352,7 @@ p {
     top: 7%;
     left: 18%;
     font-size: 0.9em;
-    color: var(--color-10);
+    color: var(--img-gallery);
 }
 
 /* Botones de Navegación */
@@ -379,20 +367,12 @@ p {
     padding: 10px 15px;
     font-size: 1em;
     cursor: pointer;
-    color: var(--color-10);
+    color: var(--img-gallery);
     width: 15%;
     min-width: 50px;
     padding: 15px;
 }
-/*
-.prev:active,
-.next:active {
-    color: white;
-}
-.close:active {
-    color: var(--color-10);
-}
-*/
+
 .prev {
     left: 5%;
 }
@@ -419,6 +399,57 @@ footer img{
 
 /* PARA PANTALLAS MAS GRANDES */
 @media(min-width: 500px) {
+    
+    /* PORTADA */
+    .portada p {
+        font-size: 1.1em;
+    }
+    
+    .nombres-novios h1 {
+        font-weight: 500;
+        font-size: 4em;
+    }
+    
+    #h1-2 {
+        font-size: 2.5em;
+    }
+
+    #scrollToFecha {
+        margin: 0.5em auto;
+        left: 5%;
+    }
+
+    /* FECHA */
+    .fecha {
+        justify-content: center ; 
+    }
+
+    .fecha h3 {
+        margin: 3em 0 0.5em 0; 
+        font-size: 2em;
+    }
+
+    #marco-sup, #marco-inf {
+        width: 100vw;
+        max-height: 30%; /* Más bajo en desktop */
+        object-fit: cover; /* Rellena el ancho */
+    }
+
+    #scrollToSpots {
+        margin-bottom: 2em;
+        left: 5%;
+    }
+
+    #scrollToSpots img {
+        width: 60px;
+    }
+    
+    .countdown {
+        font-size: 1.5em;
+    }
+    
+    /* LUGARES */
+    
     .lugares {
         display: flex;
         flex-direction: row;
@@ -426,15 +457,25 @@ footer img{
         justify-content: space-evenly;
     }
 
+    #ceremonia {
+        padding-right: 6em;
+    }
+
+    #festejo {
+        padding-left: 2em;
+    }
+
+    /* GALLERIA DE FOTOS */
+
     .pics img {
-        min-width: 25vw;
+        min-width: 20vw;
     }
 
     .lightbox img {
-        max-width: 50vw;
-        max-height: 80vh;
-        height: auto;
+        /*max-width: 50vw;*/
+        max-height: 90vh;
         width: 100%;
+        height: auto;
     }
 
     .lightbox img:hover{
@@ -443,8 +484,9 @@ footer img{
     
     /* Botón de Cerrar */
     .close {
-        right: 20%;
-        font-size: 2em;
+        top: 2%;
+        right: 15%;
+        font-size: 1.8em;
         color: white;
     }
     .close:hover{
@@ -452,11 +494,10 @@ footer img{
     }
 
     .image-counter {
-        top: 8%;
-        right: 78%;
-        font-size: 1.2em;
+        top: 5%;
+        left:15%;
+        font-size: 0.9em;
         color: white;
-
     }
 
     /* Botones de Navegación */
@@ -475,10 +516,10 @@ footer img{
         transform: scale(1.2);
     }
     .prev {
-        left: 22%;
+        left: 30%;
     }
     .next {
-        right: 22%;
+        right: 30%;
     }
 
     /* textos */
@@ -494,17 +535,17 @@ footer img{
         font-size: 1.1em;
     }
     
-    .portada p {
-        font-size: 1.1em;
+    .icon {
+        width: 60px;
+        height: auto;
     }
-    
-    .nombres-novios h1 {
-        font-weight: 500;
-        font-size: 4em;
-    }
-    
-    #h1-2 {
-        font-size: 2.5em;
+
+    footer img{
+        width: auto;
+        height: 30vh;
+        place-self: center;
+        margin-top: 5em;
+        margin-bottom: 1em;
     }
         
  /* revisar iconos y boton del salon */
