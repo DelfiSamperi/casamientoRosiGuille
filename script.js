@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //BOTON HACIA EL FORM
 document.getElementById("linkBtn").addEventListener("click", function () {
-    window.open("https://forms.gle/DMxDQtH1zAb2tRjh6", "_blank");
+    window.open("https://forms.gle/DMxDQtH1zAb2tRjh6", "_blank", "noopener");
 });
 
 // ------------------------------------------------------
