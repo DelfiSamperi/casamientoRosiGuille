@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     function actualizarCuentaRegresiva() {
-        const fechaObjetivo = new Date("2025-10-12T00:00:00").getTime();
+        const fechaObjetivo = new Date("2025-10-12T12:00:00").getTime();
         const ahora = new Date().getTime();
         const diferencia = fechaObjetivo - ahora;
 
